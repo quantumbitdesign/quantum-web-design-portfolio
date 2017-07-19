@@ -1,0 +1,2 @@
+So, one idea, in order to go along with the quantum computing theme of the site, is to use the css transform property to "pulsate" and enlarge a "phosphorous nucleus," and after 5 seconds of "onhover:", have css animation rotate another "phosphorous electron" on the other side of the page to the other direction, to simulate the flip of spin.
+
