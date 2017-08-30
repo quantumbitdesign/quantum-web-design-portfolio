@@ -1,7 +1,9 @@
+<!doctype html>
+<html>
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link rel="stylesheet" href="normalizecss.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" href="stylecss.css">
 	<link rel="stylesheet" href="responsivecss.css">
 </head>
@@ -10,32 +12,39 @@
 
 <body>
 	<header>
-	<h1>Eloquent JavaScript Exercise Solutions</h1> <!-- not 100% on this name -->
+	<h1 class="mainHeader">Eloquent Javascript <br /> Solutions</h1>
 	<nav>
 		<ul>
 			<li><a href="index.html">Home</a></li>
 			<li><a href="samples.html">Samples</a></li>
-			<li><a href="contact.html">Contact Me</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="eloquent.html">Eloquent JS Exercise Solutions</a></li>
+			<li><a href="contact.html">Contact</a></li>
+			<li><a href="about.html">About Me</a></li>
 		</ul>	
 	</nav>
 	</header>
 	
 	<article>
 		<h2>Working with Javascript!</h2>
-		<div>
-			<p>In conjunction with my learning objectives with TeamTreehouse, I have decided to also take on the exercises at the end of each chapter. I have listed them below, and if you feel they could be more streamlined, or perhaps you just want to comment on some, feel free!</p>
-			<p>&mdash; Kevin</p>
+		<div class="elegantIntroWrap">
+			<section class="elegantIntroParagraph">
+			<p class="introParagraph">In conjunction with my learning objectives with TeamTreehouse, I have decided to also take on the exercises at the end of each chapter. I have listed them below, and if you feel they could be more streamlined, or perhaps you just want to comment on some, feel free!</p>
+			<p class="introParagraph">These assignments were great practice for learning more about conditional statement structures, operators, and also to get to know how the language actually employs it's logic. I am really enjoying the book so far! If you haven't checked it out, <a href="http://eloquentjavascript.net/01_values.html" target="_blank">here's a link</a> to the website.
+			</p>
+			</section>
+			<section class="elegantIntroPSParagraph">
+			<p class="introParagraph"> P.S. I have personally had a good experience at TeamTreehouse, and recommend them as a resource for learning. <a href="https://teamtreehouse.com/library/q:Javascript" target="_blank">Here's a link</a> to their learning paths.</p>
+			<img src="images/logos.png" alt="pictures of three logos: java script, h t m l 5 and c s s 3" class="logoPic">
+			
+			</section>
 		</div>
 	</article>
 	
 	<section class="codeContainer">
-		<h3>Chapter 2, Exercise 1</h3>
-		<h5>Loop Practice</h5>
+		<h3 class="exerciseHeader">Chapter 2, Exercise 1</h3>
+		<h5 class="challengeTitle">Looping a Triangle</h5>
 		<p>Write a loop that makes seven calls to console.log to output the following triangle:</p>
 		<p>
-			# <br>
+			#<br>
 			##<br>
 			###<br>
 			####<br>
@@ -49,8 +58,8 @@
 	</section>
 	
 	<section class="codeContainer">
-		<h3>Chapter 2, Exercise 2</h3>
-		<h5>FizzBuzz</h5>
+		<h3 class="exerciseHeader">Chapter 2, Exercise 2</h3>
+		<h5 class="challengeTitle">FizzBuzz</h5>
 		<p>
 		Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.</p>
 		<p>
@@ -61,8 +70,8 @@
 	</section>
 	
 	<section class="codeContainer">
-		<h3>Chapter 2, Exercise 3</h3>
-		<h5>Chess Board</h5>
+		<h3 class="exerciseHeader">Chapter 2, Exercise 3</h3>
+		<h5 class="challengeTitle">Chess Board</h5>
 		<p>
 		Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.</p>
 		<p>
@@ -83,8 +92,8 @@
 <script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 	</section>
 
-	
-	
+</body>	
+</html>
 	
 	
 	

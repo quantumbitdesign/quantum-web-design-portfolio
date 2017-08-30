@@ -1,49 +1,108 @@
-  body { text-align: center;}
-  h1 { font-size: 50px; }
+  body { text-align: center; font-size: 100%;}
   body { font: 20px Helvetica, sans-serif; color: #333; }
-  article { display: block; text-align: center; width: 650px; margin: 0 auto; }
+  article { display: block; text-align: center; margin: 0 auto; }
   a { color: #dc8100; text-decoration: none; }
   a:hover { color: #333; text-decoration: none; }
   ul { list-style: none; }
   code {font-family: monospace; color: green; padding: 4px; font-weight: bold;}
+  h2 {font-weight: bold; margin: 40px;}
   
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  .forestContainer {
-
-  }
   
   .forestContainer img {
-	margin: 0 auto;
-	padding: 0;
+	z-index: 1;
+	height: 600px;
+	max-width: 1000px;
+  }
+
+  .mainHeader {
+	  font-family: 'Ubuntu Mono', monospace;
+	  font-size: 3.75em;
+	  color: #dc8100;
+	  font-weight: bold;
+	  margin: 20px;
+	    
+  }
+  
+  .introParagraph {
+	  margin: 28px;
+  }
+  
+  /************************* Eloquent JS Page Styling ***************************/
+  
+  
+  .elegantIntroWrap {
+	  display: flex;
+	  flex-direction: row;
+	  flex-wrap: nowrap;
+	  justify-content: space-evenly;
+	  align-items: baseline;
+	  margin: 20px;
+  }
+  .elegantIntroParagraph {
+	  width: 66%;
+	  flex-grow: 2;
+	  border: 4px solid black;
+	  border-radius: 87px 85px 27px 53px / 127px 25px 16px 18px;
+	  box-shadow: inset 0 0 1em #dc8100, 0 0 1em #ffffe6;
+	  margin: 0 10px 0 0;
+  }
+  .elegantIntroPSParagraph {
+	  flex-grow: 1;
+	  width: 34%;
+	  border: 4px solid black;
+	  border-radius: 85px 16px 106px 14px / 25px 26px 54px 14px;
+	  box-shadow: inset 0 0 1em #dc8100, 0 0 1em #ffffe6;
+	  margin: 0 0 0 10px;
+	  
+  }
+  
+  .logoPic {
+	  width: 75%;
+	  height: 85%;
+	  margin: 0 0 40px 0;
+  }
+  
+  .challengeTitle {
+	  font-weight: bold;
+	  padding: 0 0 15px 0;
+	  color: #666666;
+  }
+  
+  .exerciseHeader {
+	  font-weight: bold;
   }
   
   .codeContainer {
 	  text-align: left;
-	  margin: 20px;
+	  margin: 20px 20px 45px 20px;
+	  
   }
   
-  #codeChunk {
-	  background: lightgrey;
-	  display: inline-block;
-	   
-  }
   
-  #checkIt {
-	  display: inline-block;
-	  background: darkgrey;
-	  padding: 10px;
-	  border: 2px solid black;	  
-  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
