@@ -1,5 +1,5 @@
   body { text-align: center; font-size: 100%;}
-  body { font: 20px Helvetica, sans-serif; color: #333; }
+  body { font: 20px Helvetica, sans-serif; color: #333; background-color: rgba(92, 218, 197, 0.31); }
   article { display: block; text-align: center; margin: 0 auto; }
   a { color: #dc8100; text-decoration: none; }
   a:hover { color: #333; text-decoration: none; }
@@ -24,13 +24,13 @@
   }
   
   .introParagraph {
-	  margin: 28px;
+	  margin: 30px;
   }
   
   /************************* Eloquent JS Page Styling ***************************/
   
   
-  .elegantIntroWrap {
+  .eloquentIntroMainWrap {
 	  display: flex;
 	  flex-direction: row;
 	  flex-wrap: nowrap;
@@ -38,22 +38,44 @@
 	  align-items: baseline;
 	  margin: 20px;
   }
-  .elegantIntroParagraph {
+  .eloquentIntroSubWrap {
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: space-evenly;
+	  align-items: baseline;
 	  width: 66%;
+	  margin: 20px;
+  }
+  
+  .eloquentIntroSubWrap section {
+	  margin: 0 0 30px 0;
+  }
+  
+  #qotdHeader {
+	  margin: 30px 0 0 0;	  
+  }
+  
+  #qotdStyle {
+	  border-radius: 53px 27px 85px 87px / 18px 16px 25px 127px;
+  }
+  
+  .eloquentIntroParagraph {
 	  flex-grow: 2;
 	  border: 4px solid black;
 	  border-radius: 87px 85px 27px 53px / 127px 25px 16px 18px;
-	  box-shadow: inset 0 0 1em #dc8100, 0 0 1em #ffffe6;
+	  box-shadow: inset 0 0 1em #dc8100, 0px 20px 5px -8px rgba(255, 255, 209, 0.89);
 	  margin: 0 10px 0 0;
+	  background-color: white;
   }
-  .elegantIntroPSParagraph {
+  .eloquentIntroPSParagraph {
 	  flex-grow: 1;
 	  width: 34%;
 	  border: 4px solid black;
 	  border-radius: 85px 16px 106px 14px / 25px 26px 54px 14px;
-	  box-shadow: inset 0 0 1em #dc8100, 0 0 1em #ffffe6;
+	  box-shadow: inset 0 0 1em #dc8100, 0px 20px 5px -8px rgba(255, 255, 209, 0.89);
 	  margin: 0 0 0 10px;
-	  
+	  background-color: white;
   }
   
   .logoPic {
@@ -62,13 +84,21 @@
 	  margin: 0 0 40px 0;
   }
   
+  .treehouseAd {
+	  width: 75%;
+	  height: 45%;
+	  margin: 0 0 40px 0;
+	  border: 4px solid black;
+	  border-radius: 50px 50px 50px 50px / 25px 25px 25px 25px;
+  }
+  
   .challengeTitle {
 	  font-weight: bold;
 	  padding: 0 0 15px 0;
 	  color: #666666;
   }
   
-  .exerciseHeader {
+  .strongHeader {
 	  font-weight: bold;
   }
   
