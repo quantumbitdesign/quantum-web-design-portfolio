@@ -1,0 +1,48 @@
+body {
+  text-align: center;
+}
+
+h1 {
+  
+}
+
+.wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 35px auto;
+  padding: 5px;
+  border: 5px solid black;
+  max-height: 80%;
+  max-width: 65%;
+  
+}
+
+.playerChoice, .computerChoice {
+  border: 5px solid black;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  display: block;
+}
+
+#playerPic, #computerPic {
+  width: 100%;
+  height: 100%;
+}
+
+.interfaceWrapper {
+  border: 5px solid black;
+  margin: 10px;
+  width: 200px;
+  height: 200px;
+  text-align: center;
+}
+
+#resultMessage {
+	font-size: 1.5em;
+	color: red;
+	padding: 10px;
+	
+}

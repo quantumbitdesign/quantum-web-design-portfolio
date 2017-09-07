@@ -13,15 +13,20 @@
 
 <body>
 	<header>
+	<div onclick="openNav()" id="navHamburger">&#9778;</div>
 	<h1 class="mainHeader">QuantumBit Web Design</h1>
-	<nav>
+	</header>
+	<nav id="mainSideNav" class="sideNav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<ul>
-			<li><a href="samples.html">Samples</a></li>
-			<li><a href="contact.html">Contact</a></li>
-			<li><a href="about.html">About Me</a></li>
-			<li><a href="eloquent.html">Eloquent JS Exercise Solutions</a></li>
-		</ul>	
+			<li><a href="index.html" onclick="closeNav()">Home</a></li>
+			<li><a href="samples.html" onclick="closeNav()">Javascript Sandbox</a></li>
+			<li><a href="contact.html" onclick="closeNav()">Contact</a></li>
+			<li><a href="about.html" onclick="closeNav()">About Me</a></li>
+			<li><a href="eloquent.html" onclick="closeNav()">Eloquent JS Exercise Solutions</a></li>
+		</ul>
 	</nav>
+	<div id="overlay" onclick="closeNav()"></div>
 	</header>
 	
 	<article>
@@ -31,6 +36,7 @@
 	<div class="forestContainer">
 		<img src="images/forest triangles.jpg" alt="Picture of a serene temperate forest with vibrant multi colored abstract triangle shapes in the middle">
 	</div>
-
+	
+<script src="quantum.js"></script>
 </body>
 </html>

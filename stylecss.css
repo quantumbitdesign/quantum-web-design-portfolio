@@ -1,11 +1,13 @@
   body { text-align: center; font-size: 100%;}
-  body { font: 20px Helvetica, sans-serif; color: #333; background-color: #984B43; }
+  body { font: 20px Helvetica, sans-serif; color: #333; background: linear-gradient(to bottom right, #000000 -12%, #ffffff 86%); }
   article { display: block; text-align: center; margin: 0 auto; z-index: 1;}
   a { color: #0d3c71; text-decoration: none; }
   a:hover { color: #1fded3; text-decoration: none; }
   ul { list-style: none; }
   code {font-family: monospace; color: green; padding: 4px; font-weight: bold;}
   h2 {font-weight: bold; margin: 40px;}
+  header {display: flex;}
+  footer {display: flex; justify-content: center; padding: 20px;}
   
   
   .forestContainer img {
@@ -19,23 +21,135 @@
 	  font-size: 3.75em;
 	  color: #dc8100;
 	  font-weight: bold;
-	  margin: 20px;
-	    
+	  margin: 20px auto;
+	  order: 2  
   }
   
   .introParagraph {
 	  margin: 30px;
+	  font-size: 1.0em;
   }
   
   .pageWrapper {
 	  max-width: 1400px;
 	  margin-left: auto;
 	  margin-right: auto;
-	  background-color: #984B43;
+	  display: hidden;
   }
   
-  /************************* Eloquent JS Page Styling ***************************/
+  /************************* Navigation Styling ***************************/
   
+
+  .sideNav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 9999;
+      top: 0;
+      left: 0;
+      background-image: url("images/woodbackground.jpg");
+      overflow-x: hidden;
+      padding-top: 60px;
+      transition: 0.5s ease-in;
+	  -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+	  color: #000000;
+}
+  #overlay {
+	  position: fixed;
+      display: none;
+      width: 100%;
+      height: 100%;
+      top: 0; 
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,0.5);
+      z-index: 2;
+      cursor: pointer;
+  }
+
+/* The navigation menu links */
+  .sideNav a {
+	  padding: 16px;
+	  margin: 6px;
+      text-decoration: none;
+      font-size: 1.2em;
+      color: #000000;
+      display: block;
+      transition: 0.3s
+	  -webkit-transition: 0.3s;
+      -moz-transition: 0.3s;
+      -o-transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+  .sideNav a:hover, .offcanvas a:focus{
+      color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+  .sideNav .closebtn {
+      position: absolute;
+      top: 0;
+      right: 25px;
+      font-size: 36px;
+      margin-left: 50px;
+}
+
+  #navHamburger {
+	  display: block;
+	  cursor: pointer;
+	  width: 2.0em;
+	  height: 2.0em;
+	  margin: 25px 0 0 30px;
+	  font-size: 2.0em;
+	  font-weight: bold;
+	  transition: background-color 0.5s, border-color 0.5s, color 0.5s, transform 1s;
+	  -webkit-transition: background-color 0.5s, border-color 0.5s, color 0.5s, -webkit-transform 1s;
+	  background-color: gray;
+	  order: 1;
+	  padding: 6px 0 0 0;
+	  color: black;
+	  border: 4px solid black;
+	  border-radius: 30px;
+  }
+  
+  #navHamburger:hover {
+	  background-color: black;
+	  border-color: white;
+	  color: white;
+	  -webkit-transform: rotate(180deg);
+	  transform: rotate(180deg);
+  }
+  
+  /************************* Footer Styling ***************************/
+  
+  #footerSection1 {
+	  order: 1;
+	  width: 80%;
+	  margin: 0 auto;
+  }
+  
+  #footerSection2 {
+	  order: 2;
+	  width: 20%;
+	  margin: 0 auto;
+  }
+  
+  #footerSection2 img {
+	  width: 80px;
+	  height: 80px;
+  }
+  
+  
+  
+  
+  
+  
+  
+  /************************* Eloquent JS Page Styling ***************************/
   
   .eloquentIntroMainWrap {
 	  display: flex;
@@ -43,8 +157,7 @@
 	  flex-wrap: nowrap;
 	  justify-content: space-evenly;
 	  align-items: baseline;
-	  margin: 0 40px 0 0;
-	  z-index: 1;
+	  margin: 40px;
   }
   .eloquentIntroSubWrap {
 	  display: flex;
@@ -53,12 +166,6 @@
 	  justify-content: center;
 	  align-items: baseline;
 	  width: 66%;
-	  margin: 20px 40px 0 0;
-  }
-  
-  .eloquentIntroSubWrap section {
-	  margin: 40px auto 0 auto;
-	  z-index: 1;
   }
   
   #qotdHeader {
@@ -67,6 +174,7 @@
   
   #qotdStyle {
 	  border-radius: 53px 27px 85px 87px / 18px 16px 25px 127px;
+	  margin: 10px 10px 0 0;
   }
   
   .eloquentIntroParagraph {
@@ -84,10 +192,8 @@
 	  border: 4px solid black;
 	  border-radius: 85px 16px 106px 14px / 25px 26px 54px 14px;
 	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	  margin: 0 10px 0 0;
 	  background-color: #dc8100;
 	  color: white;
-	  z-index: 5;
   }
   
   .logoPic {
@@ -121,14 +227,14 @@
 	  margin: 20px 20px 45px 20px;
 	  background-image: url("images/Wrenches.png");
 	  background-repeat: no-repeat;
-	  background-position: 50% top; 
+	  background-position: 50% top;
   }
   
   .codeSectionWrapper {
 	  border: 4px solid black;
 	  border-radius: 50px 50px 50px 50px / 25px 25px 25px 25px;
 	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	  margin: 40px 0 0 0;
+	  margin: 40px;
 	  background-color: #dc8100;
 	  color: white;
 	  padding: 25px;
@@ -155,11 +261,106 @@
 	  margin: 40px 20px 40px 20px;
   }
   
+   /********************** Javascript Sandbox Styling ************************/
   
   
+  .sandBoxItem {
+	  text-align: left;
+	  margin: 30px 30px 0 30px;
+	  color: white;
+	  background-color: #dc8100;
+	  font-size: 1.0em;
+	  padding: 25px;
+	  border: 4px solid black;
+	  border-radius: 30px 30px 30px 30px;
+	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
+  }
   
+  .sandBoxItem h3 {
+	  font-weight: bold;
+  }
+ 
+  .buttonWrapper {
+	  display: flex;
+	  flex-direction: row;
+	  justify-content: space-between;
+  }
+ 
+  #launchButton {
+	  display: inline-block;
+	  border-radius: 10px;
+	  background-color: #4d4d4d;
+	  border: none;
+	  color: #f2f2f2;
+	  text-align: center;
+	  font-size: 28px;
+	  width: 200px;
+	  transition: all 0.5s;
+	  cursor: pointer;
+	  padding: 20px;
+	  margin: 25px;
+	  box-shadow: 0 9px #999;
+  }
   
+  #launchButton span {
+	  cursor: pointer;
+	  display: inline-block;
+	  position: relative;
+	  transition: 0.5s;
+	  font-family: 'Lalezar', cursive;
+  }
   
+  #launchButton span:after {
+	  content: '\00bb';
+	  position: absolute;
+	  opacity: 0;
+	  top: 0;
+	  right: -20px;
+	  transition: 0.5s;
+  }
+  
+  #launchButton:hover span {
+	  padding-right: 25px;
+  }
+  #launchButton:hover {
+	  background-color: #333333;
+  }
+  
+  #launchButton:hover span:after {
+	  opacity: 1;
+	  right: 0;
+  } 
+  #launchButton:active {
+  background-color: #333333;
+  box-shadow: 0 5px #39ac39;
+  transform: translateY(4px);
+}
+
+  #launchButton:focus {
+	  outline: 0;
+  }
+  
+  .logoWrapper, .launchWrapper {
+	  display: block;
+	  text-align: center;
+  }
+  .logoWrapper {
+	  margin-right: 35px;
+  }
+  
+  .logoWrapper img {
+	  border-radius: 10px;
+  }
+  
+  .logoWrapper img:hover {
+	  opacity: .70;
+  }
+  
+  #codepenInfo {
+	  font-size: 0.7em;
+	  color: white;
+	  margin: 0 0 5px 0;
+  }
   
   
   

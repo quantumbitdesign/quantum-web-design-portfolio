@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link href="style.css"rel="stylesheet"/>
+  </head>
+  <header>
+    <title>Rock, Paper, Scissors: QuantumBit Design
+    </title>
+    <h1>Rock, Paper, Scissors</h1>
+  </header>
+<body>
+  <div class="wrapper">
+    <div class="playerChoice">
+      <img src="" id="playerPic">
+    </div>
+    <div class="computerChoice">
+      <img src="" id="computerPic">
+    </div>
+    <div class="interfaceWrapper">
+      <form>
+        <label>Choose your Weapon!
+        <select name="select" id="selector">
+           <option value="rock">Rock</option> 
+           <option value="paper">Paper</option>
+           <option value="scissors">Scissors</option>
+        </select><br>
+        </label>
+        <button type="button" id="battle" onClick="battleSim()">Battle!</button>
+      </form>
+	  <p id="resultMessage"></p>
+    </div>
+  </div>
+<script src="rps.js"></script>	
+</body>
+</html>

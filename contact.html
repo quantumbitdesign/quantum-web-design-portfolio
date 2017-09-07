@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 	<link rel="stylesheet" href="stylecss.css">
 	<link rel="stylesheet" href="responsivecss.css">
@@ -12,18 +13,23 @@
 
 <body>
 	<header>
-	<h1 class="mainHeader">Contact</h1>
-	<nav>
+	<div onclick="openNav()" id="navHamburger">&#9778;</div>
+	<h1 class="mainHeader">QuantumBit Web Design</h1>
+	</header>
+	<nav id="mainSideNav" class="sideNav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<ul>
-			<li><a href="index.html">Home</a></li>
-			<li><a href="samples.html">Samples</a></li>
-			<li><a href="about.html">About Me</a></li>
-			<li><a href="eloquent.html">Eloquent JS Exercise Solutions</a></li>
-		</ul>	
+			<li><a href="index.html" onclick="closeNav()">Home</a></li>
+			<li><a href="samples.html" onclick="closeNav()">Javascript Sandbox</a></li>
+			<li><a href="contact.html" onclick="closeNav()">Contact</a></li>
+			<li><a href="about.html" onclick="closeNav()">About Me</a></li>
+			<li><a href="eloquent.html" onclick="closeNav()">Eloquent JS Exercise Solutions</a></li>
+		</ul>
 	</nav>
+	<div id="overlay" onclick="closeNav()"></div>
 	</header>
 	
 	
-	
+<script src="quantum.js"></script>
 </body>
 </html>
