@@ -1,0 +1,119 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lalezar" rel="stylesheet"> 
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+	<link rel="stylesheet" href="stylecss.css">
+	<link rel="stylesheet" href="responsivecss.css">
+</head>
+	
+<title>QuantumBit Web Solutions</title>
+
+<body>
+<div class="pageWrapper">
+	<header>
+	<div onclick="openNav()" id="navHamburger">&#9778;</div>
+	</header>
+	<nav id="mainSideNav" class="sideNav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<ul>
+			<li><a href="index.html" onclick="closeNav()" id="home">Home</a></li>
+			<li><a href="sandbox.html" onclick="closeNav()" id="sandbox">Javascript</br>Sandbox</a></li>
+			<li><a href="contact.html" onclick="closeNav()" id="contact">Contact</a></li>
+			<li><a href="about.html" onclick="closeNav()" id="about">About Me</a></li>
+			<li><a href="eloquent.html" onclick="closeNav()" id="eloquent">Eloquent JS</br>Exercise Solutions</a></li>
+		</ul>
+	</nav>
+	<div id="overlay" onclick="closeNav()"></div>
+	</header>
+	<h1>The Javascript Sandbox</h1>
+	<article class="itemWrapper">
+	
+	<section class="sandBoxItem">	
+	<h3>Javascript Mini Game</h3><br>
+	<p>When going through my learning objectives, I learned about a great library for game development in Javascript called "Phaser."</p>
+	<p>Phaser makes it easy to incorporate commonly used dynamics into your game, and through some experimenting and with treehouse's help, I was able to make a basic coin grabber. <a href="http://www.phaser.io" target="_blank">Here's a link</a> to the phaser site. Check it out!</p>
+	
+	<div class="buttonWrapper">
+	
+		<div class="launchWrapper">
+		<form action="game/index.html" target="_blank">
+		<button class="button" id="launchButton"><span>Launch </span></button>
+		</form>
+		</div>
+		
+			<a href="https://codepen.io/QuantumBitDesign/pen/eEaGma" target="_blank">
+			<div class="logoWrapper">
+			<p id="codepenInfo">See the Code!</p>
+			<img src="images/codepen.png" alt="the logo for codepen.io, a front end development sandbox">
+			</div></a>
+	</div>
+	</section>
+	
+	<section class="sandBoxItem">	
+	<h3>Rock, Paper, Scissors!</h3><br>
+	<p>That age old game enduring onward! Funny enough, this game posed a decent challenge in it's logic system. Although my first try was successful, I do see ways in which I can optimize it. Eventually I will add a score keeping system, and a way to clear.</p>
+	<p>A couple things of note: I chose to use javascript to select the src attribute of the image tag, then swap out for the correct URL. CSS probably would have been a better way to handle this because I ended up having the broken image icons show up on page load. To be continued..</p>
+	
+	<div class="buttonWrapper">
+	
+		<div class="launchWrapper">
+		<form action="rock paper scissors/index.html" target="_blank">
+		<button class="button" id="launchButton"><span>Launch </span></button>
+		</form>
+		</div>
+		
+			<a href="https://codepen.io/QuantumBitDesign/pen/eEaebe" target="_blank">
+			<div class="logoWrapper">
+			<p id="codepenInfo">See the Code!</p>
+			<img src="images/codepen.png" alt="the logo for codepen.io, a front end development sandbox">
+			</div></a>
+	</div>
+	</section>
+	
+	<section class="sandBoxItem">	
+	<h3>Javascript Mini Game</h3><br>
+	<p>When going through my learning objectives, I learned about a great library for game development in Javascript called "Phaser."</p>
+	<p>Phaser makes it easy to incorporate commonly used dynamics into your game, and through some experimenting and with treehouse's help, I was able to make a basic coin grabber. <a href="http://www.phaser.io" target="_blank">Here's a link</a> to the phaser site. Check it out!</p>
+	
+	<div class="buttonWrapper">
+	
+		<div class="launchWrapper">
+		<form action="game/index.html" target="_blank">
+		<button class="button" id="launchButton"><span>Launch </span></button>
+		</form>
+		</div>
+		
+			<a href="https://codepen.io/QuantumBitDesign/pen/eEaGma" target="_blank">
+			<div class="logoWrapper">
+			<p id="codepenInfo">See the Code!</p>
+			<img src="images/codepen.png" alt="the logo for codepen.io, a front end development sandbox">
+			</div></a>
+	</div>
+	</section>
+	
+	</article>
+	
+	
+	<footer>
+	
+		<div id="footerSection1">
+		<p>&copy; QuantumBit Design</p>
+		<p>If you have a question about the site, or just simply want to chat, please <a href="contact.html">Contact Me</a>.</p>
+		<p>This site makes use of cookies and log data to optimize your experience while here, and while visiting this site, you agree to have this data collected. Use of the site without permission is prohibited.</p>
+		</div>
+		<div id="footerSection2">
+		<a href="https://twitter.com/QBit_Design" target="_blank"><img src="images/twitter.png" alt="twitter's icon, a blue bird chirping"></a>
+		<a href="https://www.linkedin.com/in/quantumbitdesign/" target="_blank"><img src="images/linkedin.png" alt="linked in's icon, the word 'in' with a blue background"></a>
+		</div>
+		
+	</footer>
+
+<script src="quantum.js"></script>	
+</div>
+</body>
+</html>

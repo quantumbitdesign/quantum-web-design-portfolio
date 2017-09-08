@@ -1,5 +1,23 @@
+@media (max-width:1024px) {
+	header {
+		height: 150px;
+	}
+}
+@media (max-width:480px) {
+	header {
+		height: 75px;
+	}
+}
+
+
+
 /* Index Styling */
 
 
 /********************** Navigation responsiveness **********************/
+
+
+
+
+
 
