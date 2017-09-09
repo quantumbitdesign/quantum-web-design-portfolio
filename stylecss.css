@@ -7,7 +7,7 @@
   code {font-family: monospace; color: green; padding: 4px; font-weight: bold;}
   h2 {font-weight: bold; margin: 40px;}
   header {display: flex; background-image: url("images/header.png"); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 250px;}
-  footer {display: flex; justify-content: center; height: 200px; width: 100%; background-color: white; opacity: .50; position: relative; z-index: 3; align-items: justify-content; font-weight: bold; padding: 20px 0; border-top-style: solid; border-top-color: black; border-top-width: 4px;}
+  footer {display: flex; height: 200px; width: 100%; background-color: white; opacity: .50; position: relative; z-index: 3; justify-content: evenly; font-weight: bold; padding: 20px 0; border-top-style: solid; border-top-color: black; border-top-width: 4px;}
   h1 {font-family: 'Permanent Marker', cursive; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; margin: 32px; color: black;}
   h3 {font-family: 'Permanent Marker', cursive; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;}
   label { margin: 10px; font-family: Baloo, cursive;}
@@ -21,7 +21,6 @@
 	  max-width: 1700px;
 	  margin-left: auto;
 	  margin-right: auto;
-	  display: hidden;
 	  position: relative;
 	  padding-bottom: 200px;
 	  z-index: 3;
@@ -94,11 +93,6 @@
 	}
 	
 	.rightTab:hover {
-		font-weight: bold;
-		background-color: black;
-		border-top-color: white;
-		border-bottom-color: white;
-		border-left-color: white;
 		color: white;
 	}
 	
@@ -160,6 +154,7 @@
 		display: flex;
 		justify-content: space-evenly;
 		flex-direction: row;
+		flex-wrap: wrap;
 		right: 0;
 		margin: 25px;
 		z-index: 5;
@@ -175,7 +170,6 @@
 		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
 		font-family: 'Baloo', cursive;
 	}
-
 	
 
 	
@@ -279,12 +273,11 @@
 	  transition: background-color 0.5s, border-color 0.5s, color 0.5s, transform 1s;
 	  -webkit-transition: background-color 0.5s, border-color 0.5s, color 0.5s, -webkit-transform 1s;
 	  background-color: gray;
-	  order: 1;
 	  color: black;
 	  border: 4px solid black;
 	  border-radius: 15px;
 	  padding: 5px 0 0 0;
-	  z-index: 5;
+	  z-index: 6;
   }
   
   #navHamburger:hover {
@@ -514,12 +507,13 @@
 	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
   }
  
-  .buttonWrapper {
+  .launchWrapper {
 	  display: flex;
 	  flex-direction: row;
 	  justify-content: space-between;
 	  flex-wrap: wrap;
   }
+  
  
   #launchButton {
 	  display: block;
@@ -535,6 +529,7 @@
 	  padding: 20px;
 	  margin: 25px;
 	  box-shadow: 0 9px #999;
+	  order: 1;
   }
   
   #launchButton span {
@@ -575,12 +570,8 @@
 	  outline: 0;
   }
   
-  .logoWrapper, .launchWrapper {
-	  display: block;
-	  text-align: center;
-  }
   .logoWrapper {
-	  margin-right: 35px;
+	  margin-right: 25px;
   }
   
   .logoWrapper img {
@@ -609,16 +600,15 @@
 
 .contactWrapper {
 	padding: 25px;
-	max-width: 80%;
 	background-color: #dc8100;
-	margin: 20px auto;
+	margin: 25px auto;
 	border: 4px solid black;
 	border-radius: 30px;
 	box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
 	display: flex;
 	justify-content: center;
+	min-width: 900px;
 	flex-wrap: wrap;
-	min-width: 1000px;
 	
 }
 
@@ -658,6 +648,23 @@
 textarea.form-control {
 	min-width: 100%;
 }
+
+.contactInfo {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	border: 4px solid black;
+	border-radius: 30px;
+	box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
+	background-color: #dc8100;
+	margin: 0 25px;	
+}
+
+.contactInfo span {
+	flex-grow: 1;
+	margin: 10px;
+}
   
   
   
@@ -669,7 +676,7 @@ textarea.form-control {
   
   
   
-   /****************************Mail PHP Page Styling ***************************/
+   /********************** Mail PHP Page Styling *************************/
   
   .mailMainContent{
 	padding: 25px;
@@ -692,6 +699,177 @@ textarea.form-control {
   
   
   
+  
+  
+  
+   /********************** List App Styling *************************/
+   
+  .listAppContent {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: evenly;
+	border: 4px solid black;
+	border-radius: 30px;
+	box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
+	background-color: #dc8100;
+	padding: 5px;
+	max-width: 80%;
+	margin: 0 auto;
+  }
+  
+  .listAppContent h5 {
+	  margin: 25px;
+	  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	  font-family: 'Permanent Marker', cursive;
+  }
+  
+  .listSection1 {
+	  order: 1;
+	  margin: 20px;
+  }
+  
+  .listSection2 {
+	  order: 2;
+	  margin: 20px;
+  }
+  
+  #list {
+	  display: block;
+	  width: 500px;
+	  height: 700px;
+	  background: url("images/notepad.png");
+	  background-repeat: no-repeat;
+	  background-size: 100%;
+	  max-width: 90%;
+	  max-height: 90%;
+	  padding: 55px 35px;
+	  text-align: left;
+	  
+  }
+  
+  #list li {
+	  text-decoration: none;
+	  font-size: 1.0em;
+	  font-weight: bold;
+	  margin: 20px;
+	  
+  }
+  
+  .buttonWrapper {
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: wrap;
+	  align-items: center;
+	  margin: 25px;
+	  padding: 5px;
+	  max-width: 600px;
+	  max-width: 90%;
+	  max-height: 90%;
+	  background-size: 100%;
+  }
+  
+  .buttonWrapper input {
+	  margin: 20px;
+	  width: 80%;
+  }
+  
+  .buttonWrapper button:nth-of-type(2) {
+	  background-color: #ff0000;
+  }
+  
+  .buttonWrapper button:nth-of-type(3) {
+	  background: url("images/nuke.png");
+	  background-color: #b33c00;
+	  background-repeat: no-repeat;
+	  background-size: contain;
+	  background-position: left;
+	  font-weight: bold;
+	  padding: 15px;
+	  
+  }
+  
+  .buttonWrapper button {
+	  padding: 10px;
+	  border: 4px solid black;
+	  border-radius: 10px;
+	  width: 80%;
+	  background-color: green;
+	  cursor: pointer;
+	  margin: 10px;
+  }
+  
+  .buttonWrapper button:hover {
+	background-color: #42f4a1;
+  }
+  
+  .buttonWrapper button:nth-of-type(2):hover {
+	  background-color: #ff6666;
+  }
+  
+  .buttonWrapper button:nth-of-type(3):hover {
+	  background-color: #ff7733;
+  }
+  
+  
+  
+  
+  /***************** Rock, Paper, Scissors Styling *******************/
+  
+  .wrapper {
+	  border: 4px solid black;
+	  border-radius: 30px;
+	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
+	  background-color: #dc8100;
+	  display: flex;
+	  justify-content: space-around;
+	  flex-direction: row;
+	  align-items: center;
+	  flex-wrap: wrap;
+	  margin: 35px auto;
+	  border: 5px solid black;
+	  max-width: 65%;
+	  height: 400px;
+}
+
+  .wrapper img {
+	  width: 200px;
+	  height: 200px;
+  }
+
+.playerChoice, .computerChoice {
+	
+  border: 5px solid black;
+  width: 210px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.interfaceWrapper {
+  border: 5px solid black;
+  margin: 10px;
+  width: 200px;
+  height: 325px;
+  text-align: center;
+  font-family: 'Baloo', cursive;
+  font-size: 0.9em;
+}
+
+#resultMessage {
+	font-size: 1.5em;
+	color: black;
+	padding: 10px;
+}
+
+.wrapper h5 {
+	  margin: 25px;
+	  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+	  font-family: 'Permanent Marker', cursive;
+	  order: 0;
+  }
   
   
   

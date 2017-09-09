@@ -17,12 +17,13 @@
 <source src="video/quantumvid.mp4" type="video/mp4">
 </video>
 
-<body>
+<body onload="vidLoad()">
 <div class="homePageWrapper">
 	
 	<div onclick="indexOpenNav()" id="navHamburger">&#9781;
 	</div>
-	<nav id="mainSideNav" class="sideNav">
+	
+		<nav id="mainSideNav" class="sideNav">
 		<a href="javascript:void(0)" class="closebtn" onclick="indexCloseNav()">&times;</a>
 		<ul>
 			<li><a href="index.html" onclick="indexCloseNav()" id="home">Home</a></li>
@@ -37,15 +38,10 @@
 		<span>&#9742; &ensp;<a href="tel:209-559-9323">209.559.9323</a></span>
 		<span>&#9993; &ensp;<a href="mailto: kevingoudswaard@gmail.com">kevingoudswaard@gmail.com</a></span>
 		<span><address>&#9873; &ensp;15528 Buena Vista Avenida</br> Sonora, CA 95370</address></span>
-	</div>
-	
-	
+	</div>	
 	
 	<div id="overlay" onclick="indexOverlayKill()">
 	</div>
-	
-	
-	
 	
 	<div class="rightTab" onclick="openTab()">&#8920;</div>
 	<div class="rightTabContent">
