@@ -7,6 +7,14 @@
 	header {
 		height: 75px;
 	}
+	
+	.aboutMeWrapper{
+		flex-direction: column;
+	}
+	
+	.contactWrapper {
+		min-width: 0;
+	}
 }
 
 

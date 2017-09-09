@@ -1,54 +1,55 @@
-  body { text-align: center; font-size: 100%; font: 20px Helvetica, sans-serif; color: #333; height: 100%; overflow: auto;}
+  body {font-size: 100%; font: 20px Helvetica, sans-serif; height: 100%; text-align: center;}
   html {height: 100%;}
   article { display: block; text-align: center; margin: 0 auto; z-index: 1;}
-  a { color: #0d3c71; text-decoration: none; }
+  a { color: #1a1aff; text-decoration: none; }
   a:hover { color: #1fded3; text-decoration: none; }
   ul { list-style: none; padding: 0; margin: 0;}
   code {font-family: monospace; color: green; padding: 4px; font-weight: bold;}
   h2 {font-weight: bold; margin: 40px;}
   header {display: flex; background-image: url("images/header.png"); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 250px;}
-  footer {display: flex; justify-content: center; padding: 20px; height: 200px; width: 100%; background: none; position: relative; z-index: 3; align-items: justify-content; margin-top: 50px;}
-  h1 {font-family: 'Permanent Marker', cursive; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; margin: 32px;}
+  footer {display: flex; justify-content: center; height: 200px; width: 100%; background-color: white; opacity: .50; position: relative; z-index: 3; align-items: justify-content; font-weight: bold; padding: 20px 0; border-top-style: solid; border-top-color: black; border-top-width: 4px;}
+  h1 {font-family: 'Permanent Marker', cursive; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; margin: 32px; color: black;}
+  h3 {font-family: 'Permanent Marker', cursive; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;}
+  label { margin: 10px; font-family: Baloo, cursive;}
+  input, select {margin-left: 15px;}
+  
+
+  
 
 
   .pageWrapper {
-	  max-width: 1390px;
+	  max-width: 1700px;
 	  margin-left: auto;
 	  margin-right: auto;
 	  display: hidden;
 	  position: relative;
 	  padding-bottom: 200px;
 	  z-index: 3;
-	  background: linear-gradient(to bottom right, #000000 -12%, #ffffff 86%); background-repeat: no-repeat;
+	  background: linear-gradient(to top, #FFFFFF 50%, #000000 110%); background-repeat: no-repeat;
+	  text-align: center;
+	  min-height: calc(100vh - 200px);
   }
   
   .homePageWrapper {
-	  max-width: 1390px;
-	  margin-left: auto;
-	  margin-right: auto;
+	  margin: 0 auto;
+	  max-width: 100%;
 	  display: hidden;
 	  position: relative;
-	  padding-bottom: 200px;
 	  z-index: 3;
 	  background: none;
+	  text-align: center;
+	  min-height: calc(100vh - 150px);
   }
-	
- 
-::-webkit-scrollbar {
-    width: 14px;
-}
- 
-::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.8); 
-    border-radius: 10px;
-}
- 
-::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.5); 
-}
 
 
+  
+  
+  
+  
+  
+  
+  
+  
  /************************* Home Page Styling ***************************/
   
      
@@ -62,15 +63,126 @@
     height: auto;
     transform: translate(-50%, -50%);
 }
+
 	
-	#homePageButton {
-		padding: 20px;
+	.rightTab {
+		display: block;
 		position: fixed;
-		z-index: 2;
+		top: 25%;
+		right: 0;
+		width: 30px;
+		height: 400px;
+		background-color: gray;
+		text-align: right;
+		border-radius: 28px 0px 0px 28px / 66px 0px 0px 66px;
+		border-top-width: 4px;
+		border-left-width: 4px;
+		border-bottom-width: 4px;
+		border-top-style: solid;
+		border-left-style: solid;
+		border-bottom-style: solid;
+		border-top-color: black;
+		border-left-color: black;
+		border-bottom-color: black;
+		transition: 0.5s ease-in;
+	    -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -o-transition: 0.5s;
+		cursor: pointer;
+		z-index: 900;
+		padding: 190px 0;
 	}
 	
-  
+	.rightTab:hover {
+		font-weight: bold;
+		background-color: black;
+		border-top-color: white;
+		border-bottom-color: white;
+		border-left-color: white;
+		color: white;
+	}
+	
+	.rightTabContent {
+	  font-family: 'Permanent Marker', cursive;
+      height: 400px;
+      width: 0;
+      position: fixed;
+      z-index: 900;
+      top: 25%;
+      right: 0;
+      background-color: gray;
+	  border-top-width: 4px;
+	  border-bottom-width: 4px;
+	  border-top-style: solid;
+	  border-bottom-style: solid;
+	  border-top-color: black;
+	  border-bottom-color: black;
+      overflow-x: hidden;
+      transition: 0.5s ease-in;
+	  -webkit-transition: 0.5s;
+      -moz-transition: 0.5s;
+      -o-transition: 0.5s;
+	  color: #000000;
+	  text-align: center;
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: space-evenly;
+	  margin: 0 auto;
+}
+	
+	.rightTabContent a {
+		color: white;
+	}
+	
+	.rightTabContent a:hover, .offcanvas a:focus{
+	  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+	  
+	.rightTabContent .closebtn {
+      position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 1.2em;
+	  background: none;
+}
+	
+	.rightTabContent img {
+		width: 68px;
+		height: 68px;
+	}
+	
+	.rightTabContent img:hover {
+		opacity: .70;
+	}
+	
+	.homePageContactInfo {
+		position: fixed;
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: row;
+		right: 0;
+		margin: 25px;
+		z-index: 5;
+		border: 4px solid black;
+		border-radius: 20px;
+		background-color: gray;
+	}
+	
+	.homePageContactInfo span {
+		margin: 15px 25px 0 25px;
+		display: inline-block;
+		color: black;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+		font-family: 'Baloo', cursive;
+	}
 
+	
+
+	
+	
+	
+	
+	
   
   /************************* Navigation Styling ***************************/
   
@@ -92,6 +204,7 @@
 	  color: #000000;
 	  text-align: center;
 }
+
   #overlay {
 	  position: fixed;
       display: none;
@@ -139,13 +252,12 @@
   }
   
 
-/* When you mouse over the navigation links, change their color */
   .sideNav a:hover, .offcanvas a:focus{
       color: white;
 	  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
 }
 
-/* Position and style the close button (top right corner) */
+
   .sideNav .closebtn {
       position: absolute;
       top: 0;
@@ -157,10 +269,11 @@
 
   #navHamburger {
 	  display: block;
+	  position: fixed;	  
 	  cursor: pointer;
 	  width: 2.0em;
 	  height: 2.0em;
-	  margin: 25px 0 0 30px;
+	  margin: 30px 0 0 30px;
 	  font-size: 1.5em;
 	  font-weight: bold;
 	  transition: background-color 0.5s, border-color 0.5s, color 0.5s, transform 1s;
@@ -171,6 +284,7 @@
 	  border: 4px solid black;
 	  border-radius: 15px;
 	  padding: 5px 0 0 0;
+	  z-index: 5;
   }
   
   #navHamburger:hover {
@@ -181,6 +295,26 @@
 	  transform: rotate(180deg);
   }
   
+  .sideNav::-webkit-scrollbar {
+    width: 14px;
+}
+ 
+  .sideNav::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.8); 
+    border-radius: 10px;
+}
+ 
+  .sideNav::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.5); 
+}
+
+
+
+
+
+
+
   /************************* Footer Styling ***************************/
   
   
@@ -189,6 +323,7 @@
 	  order: 1;
 	  width: 80%;
 	  margin: 0 auto;
+	  padding: 0 20px;
   }
   
   #footerSection2 {
@@ -216,7 +351,7 @@
   
   
   
-  /************************* Eloquent JS Page Styling ***************************/
+  /************************* Eloquent JS Page Styling*************************/
   
   
   .introParagraph {
@@ -257,7 +392,7 @@
 	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
 	  margin: 0 10px 0 0;
 	  background-color: #dc8100;
-	  color: white;
+	  color: black;
   }
   .eloquentIntroPSSection {
 	  width: 34%;
@@ -265,7 +400,7 @@
 	  border-radius: 85px 16px 106px 14px / 25px 26px 54px 14px;
 	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
 	  background-color: #dc8100;
-	  color: white;
+	  color: black;
   }
   
   .logoPic {
@@ -290,10 +425,6 @@
 	  color: black;
   }
   
-  .strongHeader {
-	  font-weight: bold;
-  }
-  
   .codeContainer {
 	  text-align: left;
 	  margin: 20px 20px 45px 20px;
@@ -308,30 +439,65 @@
 	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
 	  margin: 40px;
 	  background-color: #dc8100;
-	  color: white;
+	  color: black;
 	  padding: 25px;
 	  
   }
  
+ 
+  
+  
+  
+  
+  
+  
+  
   
   /************************* About Me Page Styling ***************************/
   
   .aboutMeWrapper {
 	  display: flex;
-	  flex-direction: row;
-	  flex-wrap: nowrap;
-	  justify-content: space-evenly;
-	  align-items: center;
-	  margin: 20px;
+	  margin: 30px 30px 0 30px;
+	  color: black;
+	  background-color: #dc8100;
+	  font-size: 1.0em;
+	  padding: 25px;
+	  border: 4px solid black;
+	  border-radius: 30px;
+	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
+	  overflow: auto;
+	  min-width: 400px;
   }
   
-  .aboutMeText {
-	  margin: 20px;   
+  .aboutMeWrapper img {
+	  float: left;
+	  margin: 0 20px 20px 0;
+	  border-radius: 30px;
+	  border: 4px solid black;
+  }
+  
+   .aboutMeText {
+	  margin: 20px 20px 0 20px;
   }
   
   .aboutMeBackground {
 	  margin: 40px 20px 40px 20px;
   }
+  
+  #aboutQuantum img {
+	  float: right;
+	  margin: 0 0 20px 20px;
+	  border-radius: 30px;
+	  border: 4px solid black;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
   
    /********************** Javascript Sandbox Styling ************************/
   
@@ -339,17 +505,13 @@
   .sandBoxItem {
 	  text-align: left;
 	  margin: 30px 30px 0 30px;
-	  color: white;
+	  color: black;
 	  background-color: #dc8100;
 	  font-size: 1.0em;
 	  padding: 25px;
 	  border: 4px solid black;
-	  border-radius: 30px 30px 30px 30px;
+	  border-radius: 30px;
 	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-  }
-  
-  .sandBoxItem h3 {
-	  font-weight: bold;
   }
  
   .buttonWrapper {
@@ -360,7 +522,7 @@
   }
  
   #launchButton {
-	  display: inline-block;
+	  display: block;
 	  border-radius: 10px;
 	  background-color: #4d4d4d;
 	  border: none;
@@ -407,7 +569,7 @@
   background-color: #333333;
   box-shadow: 0 5px #39ac39;
   transform: translateY(4px);
-}
+  }
 
   #launchButton:focus {
 	  outline: 0;
@@ -435,27 +597,37 @@
 	  margin: 0 0 5px 0;
   }
   
+  
+  
+  
+  
+  
+  
+  
+  
   /****************************Contact Page Styling ***************************/
 
 .contactWrapper {
 	padding: 25px;
-	margin-bottom: 20px;
-	width: 90%;
-	max-width: 700px;
-	background: #6ef;
-	margin: 0 auto;
-	border: 1px solid black;
-	border-radius: 6px;
-	box-shadow: 0 0 1em black;
+	max-width: 80%;
+	background-color: #dc8100;
+	margin: 20px auto;
+	border: 4px solid black;
+	border-radius: 30px;
+	box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	min-width: 1000px;
+	
 }
 
 .contactDisclaimer {
 	font-size: 1.0em;
-	font-family: Nunito, helvetica;
-	font-weight: bold;
+	font-family: Baloo, cursive;
 	padding: 10px 0;
 	margin: 25px auto;
-	color: #666;
+	color: black;
 	width: 90%;
 	display: block;
 	text-align: center;
@@ -467,16 +639,13 @@
 
 .form-group {
 	border: none;
-	
 }
 
 .form-inline {
 	border: none;
 }
-
-label {
-	padding-right: 5px;
-	font-family: Nunito, helvetica;
+.col-sm-3 {
+	margin-right: 35px;
 }
 
 #submit, #clear {
@@ -490,6 +659,31 @@ textarea.form-control {
 	min-width: 100%;
 }
   
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   /****************************Mail PHP Page Styling ***************************/
+  
+  .mailMainContent{
+	padding: 25px;
+	max-width: 80%;
+	background-color: #dc8100;
+	margin: 20px auto;
+	border: 4px solid black;
+	border-radius: 30px;
+	box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
+  }
+  
+  .mailMainContent h3 {
+	  font-family: Baloo, cursive;
+  }
   
   
   

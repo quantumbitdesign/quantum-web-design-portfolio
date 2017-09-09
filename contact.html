@@ -3,6 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
@@ -37,35 +38,39 @@
 		
 			<div class="row">
 				<div class="form-group col-sm-6">
-					<label for="name">Name</label>
+					<label for="name">Name
 					<input type="text" class="form-control" id="contactName" name="name" required>
+					</label>
 				</div>
 				<div class="form-group col-sm-6">
-					<label for="phone">Phone</label>
+					<label for="phone">Phone
 					<input type="phone" class="form-control" id="phone" name="phone">
+					</label>
 				</div>
 			</div><br>
 						
 			<div class="row">
 				<div class="form-group col-sm-6">
-					<label for="email">Email</label>
+					<label for="email">Email
 					<input type="email" class="form-control" id="email" placeholder='i.e. "you@yourmail.com"' name="email" required>
+					</label>
 				</div>
 				<div class="form-group col-sm-6">
-					<label for="address">Address</label>
+					<label for="address">Street
 					<input type="text" class="form-control" id="contactAddress" name="address">
+					</label>
 				</div>
 			</div><br>
-
-			<div class="row">
 			
-				<div class="form-group col-sm-4">
-					<label>City</label>
+			<div class="row">			
+				<div class="form-group col-sm-3">
+					<label>City
 					<input type="text" class="form-control" id="city" name="city">
+					</label>
 				</div>
 				
-				<div class="form-group col-sm-4">
-				<label for="state">State</label>
+				<div class="form-group col-sm-3">
+				<label for="state">State
 				<select class="form-control" id="state" name="state">
 					<option value="AL">Alabama</option>
 					<option value="AK">Alaska</option>
@@ -119,13 +124,16 @@
 					<option value="WI">Wisconsin</option>
 					<option value="WY">Wyoming</option>
 				</select>
+				</label>
 				</div>
+			
 				
-				<div class="form-group col-sm-4">
-					<label>Zip Code</label>
+				<div class="form-group col-sm-3">
+					<label>Zip Code
 					<input type="text" class="form-control" id="zip" name="zip">
+					</label>
 				</div>
-			</div><br>
+			</div>
 			
 			
 			
@@ -138,19 +146,20 @@
 					<textarea class="form-control" id="contactComment" rows="6" name="comment" required></textarea>
 				</div>
 			</div>
-			
-			<div class="buttonWrap">
-			<button type="submit" name="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
-			<button type="reset" class="btn btn-secondary btn-lg" id="clear">Clear</button>
+			<div class="form-group col-sm-12">
+				<div class="buttonWrap">
+					<button type="submit" name="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+					<button type="reset" class="btn btn-secondary btn-lg" id="clear">Clear</button>
+				</div>
 			</div>
 		</form>
+		<p class="contactDisclaimer">ATTENTION! QuantumBit Design does not share the information from this contact form with anyone. I practice good business ethic, and strict confidentiality standards, and will only use your contact information to communicate to you regarding your comment or question. Thank you!</br>&#9866; Kevin</p>
 	</div>
-	<p class="contactDisclaimer">ATTENTION! QuantumBit Design does not share the information from this contact form with anyone. I practice good business ethic, and strict confidentiality standards, and will only use your contact information to communicate to you regarding your comment or question. Thank you!</br>&#9866; Kevin</p>
-	
+</div>	
 	<footer>
 	
 		<div id="footerSection1">
-		<p>&copy; QuantumBit Design</p>
+		<p>&copy; 2017 QuantumBit Design</p>
 		<p>If you have a question about the site, or just simply want to chat, please <a href="contact.html">Contact Me</a>.</p>
 		<p>This site makes use of cookies and log data to optimize your experience while here, and while visiting this site, you agree to have this data collected. Use of the site without permission is prohibited.</p>
 		</div>
@@ -163,6 +172,6 @@
 	
 	
 <script src="quantum.js"></script>
-</div>
+
 </body>
 </html>
