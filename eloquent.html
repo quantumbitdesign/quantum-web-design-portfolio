@@ -1,66 +1,79 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" href="stylecss.css">
-	<link rel="stylesheet" href="responsivecss.css">
-</head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<meta name="description" content="This is a portfolio to showcase what I have learned in front-end development, and to provide a place for people to get to know me more.">
+		<meta name="keywords" content="quantumbit, quantumbitdesign.com, portfolio">
+		<meta name="author" content="Kevin Goudswaard, Twitter @QBit_Design">
+		<link href="https://fonts.googleapis.com/css?family=Baloo|Permanent+Marker|Racing+Sans+One|Ubuntu|Exo+2" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="stylecss.css">
+		<link rel="stylesheet" href="responsivecss.css">
+		<title>QuantumBit Web Solutions</title>
+	</head>
 	
-<title>QuantumBit Web Solutions</title>
+	<header>
+		<a href="index.html"><div class="headerClick">
+		<p>QuantumBit Design</p>
+		<p>Naturally Inspired Craft</p>
+		</div></a>
+		
+		
+		<div id="navHamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</header>
+	
+	<nav class="dropNav">
+		<ul>
+			<li><a href="index.html" id="home">Home</a></li>
+			<li><a href="sandbox.html" id="sandbox">Javascript</br>Sandbox</a></li>
+			<li><a href="contact.html" id="contact">Contact</a></li>
+			<li><a href="about.html" id="about">About Me</a></li>
+			<li><a href="eloquent.html" id="eloquent">Eloquent Javascript</a></li>
+		</ul>
+		<div class="nav-phoneNumber">
+			<a href="tel:209-559-9323">209.559.9323</a>
+		</div>
+	</nav>
+	
+	<div id="overlay">
+	</div>
 
 <body>
-	<div class="pageWrapper">
-	<header>
-	<div onclick="openNav()" id="navHamburger">&#9778;</div>
-	</header>
-	<nav id="mainSideNav" class="sideNav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<ul>
-			<li><a href="index.html" onclick="closeNav()" id="home">Home</a></li>
-			<li><a href="sandbox.html" onclick="closeNav()" id="sandbox">Javascript</br>Sandbox</a></li>
-			<li><a href="contact.html" onclick="closeNav()" id="contact">Contact</a></li>
-			<li><a href="about.html" onclick="closeNav()" id="about">About Me</a></li>
-			<li><a href="eloquent.html" onclick="closeNav()" id="eloquent">Eloquent JS</br>Exercise Solutions</a></li>
-		</ul>
-	</nav>
-	<div id="overlay" onclick="closeNav()"></div>
+<div class="pageWrapper container-fluid">
+
 	
+	<div class="rightTabClickElement tabOpener">
+			<p class="TabOpener">contact</p>
+	</div>
 	
+	<div class="rightTab">
+		<span class="closebtn">&times;</span>		
+		<div class="homePageContactInfo">
+			<span>&#9742; &ensp;<a href="tel:209-559-9323">209.559.9323</a></span>
+			<span>&#9993; &ensp;<a href="mailto: kevingoudswaard@gmail.com">kevingoudswaard@gmail.com</a></span>
+			<span><address>&#9873; &ensp;15528 Buena Vista Avenida</br> Sonora, CA 95370</address></span>
+		</div>
+	</div>
 	
-		<h1>Eloquent Javascript: Solutions to the Exercises</h1>
-		<div class="eloquentIntroMainWrap">
-		
-			<div class="eloquentIntroSubWrap">
-			<section class="eloquentIntroParagraph">
-				<p class="introParagraph">In conjunction with my learning objectives with TeamTreehouse, I have decided to also take on the exercises at the end of each chapter. I have listed them below, and if you feel they could be more streamlined, or perhaps you just want to comment on some, feel free!</p>
-				<p class="introParagraph">These assignments were great practice for learning more about conditional statement structures, operators, and also to get to know how the language actually employs it's logic. I am really enjoying the book so far! If you haven't checked it out, <a href="http://eloquentjavascript.net/01_values.html" target="_blank">here's a link</a> to the website.</p>
-			</section>
-			
-			<section class="eloquentIntroParagraph"id="qotdStyle">
-				<h3 id="qotdHeader">Quote of the Day</h3>
-				<blockquote id="qod-quote"class="introParagraph">
-					<p class="qod-text">Keep it simple, stupid!</p>
-					<p class="qod-author"><a href="http://quotesondesign.com/?p=194" target="_blank">
-					&mdash; Old Saying</a>
-					</p>
-				</blockquote>
-			</section>
-			</div>
-			
-			<section class="eloquentIntroPSSection">
-				<p class="introParagraph"> P.S. I have personally had a good experience at TeamTreehouse, and recommend them as a resource for learning. <a href="https://teamtreehouse.com/library/q:Javascript" target="_blank">Here's a link</a> to their learning paths.</p>
-				<img src="images/logos.png" alt="pictures of three logos: java script, h t m l 5 and c s s 3" class="logoPic"><br>
-			</section>
+
+	
+	<div class="row eloquentWrapper">
+	
+		<div class="centerH2">
+			<h2>Eloquent Javascript Solutions</h2>
 		</div>
 	
-	<div class="codeSectionWrapper">
-		<section class="codeContainer" id="firstExercise">
-			<h3 class="strongHeader">Chapter 2, Exercise 1</h3>
-			<h5 class="challengeTitle">Looping a Triangle</h5>
+		<section class="card codeContainer">
+			<h4>Chapter 2, Exercise 1</h4>
+			<h5>Looping a Triangle</h5>
 			<p>Write a loop that makes seven calls to console.log to output the following triangle:</p>
 			<p>
 				#<br>
@@ -71,23 +84,23 @@
 				######<br>
 				#######
 			</p>
-			<p>My Answer:</p>
+			<h5>My Answer:</h5>
 			<p data-height="160" data-theme-id="0" data-slug-hash="brQgjx" data-default-tab="js" data-user="QuantumBitDesign" data-embed-version="2" data-pen-title="Chapter 1, Exercise 1" class="codepen">See the Pen <a href="https://codepen.io/QuantumBitDesign/pen/brQgjx/">Chapter 2, Exercise 1</a> by Kevin G (<a href="https://codepen.io/QuantumBitDesign">@QuantumBitDesign</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 		</section>
 		
-		<section class="codeContainer">
-			<h3 class="strongHeader">Chapter 2, Exercise 2</h3>
-			<h5 class="challengeTitle">FizzBuzz</h5>
+		<section class="card codeContainer">
+			<h4>Chapter 2, Exercise 2</h4>
+			<h5>FizzBuzz</h5>
 			<p>Write a program that uses console.log to print all the numbers from 1 to 100, with two exceptions. For numbers divisible by 3, print "Fizz" instead of the number, and for numbers divisible by 5 (and not 3), print "Buzz" instead.</p>
 			<p>When you have that working, modify your program to print "FizzBuzz", for numbers that are divisible by both 3 and 5 (and still print "Fizz" or "Buzz" for numbers divisible by only one of those).</p>
 			<p>(This is actually an interview question that has been claimed to weed out a significant percentage of programmer candidates. So if you solved it, you’re now allowed to feel good about yourself.)</p>
-			<p>My Answer:</p>
-			<p data-height="271" data-theme-id="0" data-slug-hash="WEYORy" data-default-tab="js" data-user="QuantumBitDesign" data-embed-version="2" data-pen-title="Chapter 2, Exercise 2" class="codepen">See the Pen <a href="https://codepen.io/QuantumBitDesign/pen/WEYORy/">Chapter 2, Exercise 2</a> by Kevin G (<a href="https://codepen.io/QuantumBitDesign">@QuantumBitDesign</a>) on <a href="https://codepen.io">CodePen</a>.</p>
+			<h5>My Answer:</h5>
+			<p data-height="262" data-theme-id="0" data-slug-hash="WEYORy" data-default-tab="js" data-user="QuantumBitDesign" data-embed-version="2" data-pen-title="Chapter 2, Exercise 2" class="codepen">See the Pen <a href="https://codepen.io/QuantumBitDesign/pen/WEYORy/">Chapter 2, Exercise 2</a> by Kevin G (<a href="https://codepen.io/QuantumBitDesign">@QuantumBitDesign</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 		</section>
 		
-		<section class="codeContainer">
-			<h3 class="strongHeader">Chapter 2, Exercise 3</h3>
-			<h5 class="challengeTitle">Chess Board</h5>
+		<section class="card codeContainer">
+			<h4>Chapter 2, Exercise 3</h4>
+			<h5>Chess Board</h5>
 			<p>
 			Write a program that creates a string that represents an 8×8 grid, using newline characters to separate lines. At each position of the grid there is either a space or a “#” character. The characters should form a chess board.</p>
 			<p>
@@ -103,7 +116,7 @@
 				# # # #
 			</p>
 			<p>When you have a program that generates this pattern, define a variable size = 8 and change the program so that it works for any size, outputting a grid of the given width and height.</p>
-			<p>My Answer:</p>
+			<h5>My Answer:</h5>
 			<p data-height="349" data-theme-id="0" data-slug-hash="vJQWLX" data-default-tab="js" data-user="QuantumBitDesign" data-embed-version="2" data-pen-title="Chapter 2, Exercise 3" class="codepen">See the Pen <a href="https://codepen.io/QuantumBitDesign/pen/vJQWLX/">Chapter 2, Exercise 3</a> by Kevin G (<a href="https://codepen.io/QuantumBitDesign">@QuantumBitDesign</a>) on <a href="https://codepen.io">CodePen</a>.</p>
 		</section>
 	</div>
@@ -111,45 +124,35 @@
 </div>	
 
 	<footer>
-	
 		<div id="footerSection1">
-		<p>&copy; 2017 QuantumBit Design</p>
-		<p>If you have a question about the site, or just simply want to chat, please <a href="contact.html">Contact Me</a>.</p>
-		<p>This site makes use of cookies and log data to optimize your experience while here, and while visiting this site, you agree to have this data collected. Use of the site without permission is prohibited.</p>
+			<p>&copy; 2017 QuantumBit Design</p>
+			<p>This website makes use of cookies and log data to optimize your experience. Upon visiting this site, you agree to have this data collected. Use of the site, or its contents, without permission from the creator, is prohibited.</p>
+			<a href="index.html">Home</a>
+			<a href="contact.html">Contact Me</a>
+			<a href="about.html">About</a>
+			<a href="sandbox.html">Sandbox</a>
 		</div>
 		<div id="footerSection2">
-		<a href="https://twitter.com/QBit_Design" target="_blank"><img src="images/twitter.png" alt="twitter's icon, a blue bird chirping"></a>
-		<a href="https://www.linkedin.com/in/quantumbitdesign/" target="_blank"><img src="images/linkedin.png" alt="linked in's icon, the word 'in' with a blue background"></a>
-		</div>
-		
+			<a href="https://twitter.com/QBit_Design" target="_blank"><img src="images/twitter.png" alt="twitter logo"></a>
+			<a href="https://www.linkedin.com/in/quantumbitdesign/" target="_blank"><img src="images/linkedin.png" alt="linked in logo"></a>
+		</div>		
 	</footer>
 	
-	
-<script src="quantum.js"></script>	
-<script src="http://quotesondesign.com/api/3.0/api-3.0.js"type="text/javascript" charset="utf-8"></script>	
-<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
-
-</body>	
+ <!-- jquery -->
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+ <!-- Boostrap Ajax js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+ <!-- bootstrap.js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+ <!-- Codepen JS -->
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script> 
+ <!-- my javascript -->
+<script type="text/javascript" src="quantum.js"></script>
+</body>
 </html>
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	
 	

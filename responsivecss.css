@@ -1,30 +1,339 @@
-@media (max-width:1024px) {
-	header {
-		height: 150px;
-	}
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+	
 }
-@media (max-width:480px) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+	
+/* HEADER Special Responsiveness - Tablet and up ********************/
+
+
 	header {
+		height: 275px;
+	}
+	header p:first-child {
+	   font-size: 4.0rem;
+   }
+   
+   header p:nth-of-type(2) {
+	   font-size: 2.5rem;
+   }
+   
+/* NAVIGATION and POP OUT Special Responsiveness - Tablet and up **********/   
+   
+   
+   #navHamburger {
+		width: 2.0em;
+		height: 2.0em;
+		font-size: 1.3em;
+		border-radius: 8px;
+		padding-top: 4px;
+  }
+  .dropNav {
+		background-image: url("images/nav-background-tablet.jpg");
+  }
+  .dropNav a {
+		font-size: 1.8rem;
+  }
+  .rightTab{
+		height: 225px; 
+}
+	.rightTabClickElement {
+		height: 225px;
+	}
+	
+	.rightTabClickElement p {
+		font-size: 1.2rem;
+		text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;
+		margin: 0 0 30px;
+	}
+	.homePageContactInfo {
+		margin: 0 10px;
+	}
+	.homePageContactInfo span {
+		font-size: 1.2rem;
+	}
+	.closebtn {
+		font-size: 2.2rem;
+	}
+
+/* FOOTER Special Responsiveness - Tablet and up ***************************/
+	
+	footer {
+		height: 160px;
+	}
+	#footerSection1 {
+		font-size: 0.9rem;
+		text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 0.4px black;
+    }
+	#footerSection2 {
+	  flex-direction: column;
+	  justify-content: space-evenly;
+	  align-items: center;
+    }
+	#footerSection2 img {
+		width: 75px;
 		height: 75px;
 	}
 	
-	.aboutMeWrapper{
-		flex-direction: column;
+/* SANDBOX Special Responsiveness - Tablet and up ***************************/	
+
+	.sandBoxItem {
+	  font-size: 1.3rem;
+  }
+    .launchWrapper {
+		justify-content: space-between;
 	}
 	
-	.contactWrapper {
-		min-width: 0;
-	}
+/* CONTACT Special Responsiveness - Tablet and up ***************************/
+	
+	.contactSpans span {
+	font-size: 1.4rem;
+}
+	
+/* ABOUT ME Special Responsiveness - Tablet and up ***************************/	
+	
+	.aboutMe {
+	  font-size: 1.2rem;
+  }
+ 
+/* ELOQUENT JAVASCRIPT Special Responsiveness - Tablet and up***************/	
+ 
+    .codeContainer {
+	  font-size: 1.2rem;
+  }
+/* RPS Special Responsiveness - Tablet and up***************/
+ 
+  .rpsWrapper {
+	flex-direction: row;
+  }
+  #resultMessage {
+	  margin-bottom: 25px;
+  }
+  .playerChoice {
+	margin: 0 20px 0 0;
+  }
+
+/* LIST APP Special Responsiveness - Tablet and up***************/  
+
+  .list {
+	  height: 700px;
+	  padding: 36px 46px 95px 55px;
+	  font-size: 1.2em;
+  }
+	
+/* PAGE Special Responsiveness - Tablet and up ***************************/
+	
+    .pageWrapper {
+	  min-height: calc(100vh - 160px);
+  }
+  .profile-card {
+	  margin-right: 0;
+	  margin-top: 30px;
+  }
+  .skills-card {
+	margin-left: 0;
+	margin-top: 30px;
+  }
+  .col-sm-6 {
+	padding-right: 15px;
+    padding-left: 15px;
+  }
+
 }
 
 
 
-/* Index Styling */
 
 
-/********************** Navigation responsiveness **********************/
 
 
+
+
+
+
+
+
+
+
+/* Large devices (desktops, 992px and up) */
+
+@media (min-width: 992px) {
+
+/* NAVIGATION and POP OUT Special Responsiveness - Desktop and up *************/ 
+  
+  
+  #navHamburger {
+		display: none;
+    }
+  .dropNav {
+	    background-image: url("images/nav-background-desktop.jpg");
+		background-size: cover;
+	    background-position: 100% 35%;
+		box-shadow: 0px 16px 16px -6px #000;
+		display: flex;
+		top: 0;
+		height: 60px;
+		position: sticky;
+		position: -webkit-sticky;
+		justify-content: space-between;
+	}
+  .nav-phoneNumber {
+	  display: flex;
+	  flex-wrap: nowrap;
+	  flex-direction: row;
+	  align-items: center;
+	  justify-content: flex-end;
+  }
+  
+  .dropNav ul {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: flex-start;
+	align-content: flex-start;
+    }
+  .dropNav a {
+		font-size: 1.3rem;
+		margin: 0 20px 0 0;
+		flex-basis: content;
+    }
+  .dropNav li {
+	  flex-basis: content;
+  }
+  .pageWrapper {
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+  .rightTab{
+		height: 225px; 
+    }
+  .rightTabClickElement {
+		height: 225px;
+	}
+	
+  .rightTabClickElement p {
+		font-size: 1.2rem;
+		text-shadow: -0.8px 0 black, 0 0.8px black, 0.8px 0 black, 0 -0.8px black;
+		margin: 0 0 30px;
+	}
+  .homePageContactInfo {
+		margin: 0 10px;
+	}
+  .homePageContactInfo span {
+		font-size: 1.2rem;
+	}
+  .closebtn {
+		font-size: 2.2rem;
+	}
+	header p:first-child {
+	   font-size: 4.4rem;
+   }
+   
+    header p:nth-of-type(2) {
+	   font-size: 2.8rem;
+   }
+   .profile-card img {
+	  width: 348px;
+	  height: 405px;
+  }
+    .carousel {
+	  display: block;
+	  width: 100%;
+	  height: 500px;
+	  margin: 30px 0 30px 15px;
+	  margin-right: 0;
+	  margin-top: 30px;
+	  padding-right: 15px;
+	  border-radius: .25rem;
+  }
+  .carousel-inner {
+	max-width: 100%;
+	max-height: 100%;
+	border-radius: .25rem;
+  }
+  .carousel-inner img {
+	width: 100%;
+	height: 100%;
+	border-radius: .25rem;
+  }
+  .carousel-item {
+	width: 100%;
+	height: 500px;
+	border-radius: .25rem;
+  }
+  .carousel-caption {
+	 color: black;
+  }
+  #footerSection2 {
+	  flex-direction: row;
+    }
+	#footerSection2 img {
+		width: 90px;
+		height: 90px;
+	}
+	#footerSection1 {
+		font-size: 1.0rem;
+		text-shadow: -0.6px 0 black, 0 0.6px black, 0.6px 0 black, 0 0.6px black;
+    }
+	.sandBoxItem {
+	 width: 75%;
+	}
+	.codeContainer {
+	  width: 75%;
+	  background-position: 100% bottom;
+	  font-size: 1.3rem;
+  }
+	 .cp_embed_wrapper {
+	  max-width: 70%;
+  }
+  .rpsWrapper {
+	max-width: 80%;
+  }
+  .listAppWrapper {
+	width: 70%;
+  }
+  .list {
+	padding: 7% 7% 10% 7%;
+  }
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+	
+}
 
 
 

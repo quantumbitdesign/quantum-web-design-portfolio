@@ -1,187 +1,240 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" href="stylecss.css">
-	<link rel="stylesheet" href="responsivecss.css">
-</head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<meta name="description" content="This is a portfolio to showcase what I have learned in front-end development, and to provide a place for people to get to know me more.">
+		<meta name="keywords" content="quantumbit, quantumbitdesign.com, portfolio">
+		<meta name="author" content="Kevin Goudswaard, Twitter @QBit_Design">
+		<link href="https://fonts.googleapis.com/css?family=Baloo|Permanent+Marker|Racing+Sans+One|Ubuntu|Exo+2" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="stylecss.css">
+		<link rel="stylesheet" href="responsivecss.css">
+		<title>QuantumBit Web Solutions</title>
+	</head>
 	
-<title>QuantumBit Web Solutions</title>
+	<header>
+		<a href="index.html"><div class="headerClick">
+		<p>QuantumBit Design</p>
+		<p>Naturally Inspired Craft</p>
+		</div></a>
+		
+		
+		<div id="navHamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</header>
+	
+	<nav class="dropNav">
+		<ul>
+			<li><a href="index.html" id="home">Home</a></li>
+			<li><a href="sandbox.html" id="sandbox">Javascript</br>Sandbox</a></li>
+			<li><a href="contact.html" id="contact">Contact</a></li>
+			<li><a href="about.html" id="about">About Me</a></li>
+			<li><a href="eloquent.html" id="eloquent">Eloquent Javascript</a></li>
+		</ul>
+		<div class="nav-phoneNumber">
+			<a href="tel:209-559-9323">209.559.9323</a>
+		</div>
+	</nav>
+	
+	<div id="overlay">
+	</div>
 
 <body>
-<div class="pageWrapper">
-	<header>
-	<div onclick="openNav()" id="navHamburger">&#9778;</div>
-	</header>
-	<h1>Contact</h1>
-	<nav id="mainSideNav" class="sideNav">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<ul>
-			<li><a href="index.html" onclick="closeNav()" id="home">Home</a></li>
-			<li><a href="sandbox.html" onclick="closeNav()" id="sandbox">Javascript</br>Sandbox</a></li>
-			<li><a href="contact.html" onclick="closeNav()" id="contact">Contact</a></li>
-			<li><a href="about.html" onclick="closeNav()" id="about">About Me</a></li>
-			<li><a href="eloquent.html" onclick="closeNav()" id="eloquent">Eloquent JS</br>Exercise Solutions</a></li>
-		</ul>
-	</nav>
-	<div id="overlay" onclick="closeNav()"></div>
-	</header>
+<div class="pageWrapper container-fluid">
 	
-	<div class="contactInfo">
-		<span>&#9742; &ensp;<a href="tel:209-559-9323">209.559.9323</a></span>
-		<span>&#9993; &ensp;<a href="mailto: kevingoudswaard@gmail.com">kevingoudswaard@gmail.com</a></span>
-		<span><address>&#9873; &ensp;15528 Buena Vista Avenida</br> Sonora, CA 95370</address></span>
-	</div>
+	<div class="row contactWrapper">
 	
-	<div class="contactWrapper container-fluid">
-	
-		<form class="form-inline" action="mail.php" method="post">
+		<div class="centerH2">
+			<h2>Contact</h2>
+		</div>
 		
-			<div class="row">
-				<div class="form-group col-sm-6">
-					<label for="name">Name
-					<input type="text" class="form-control" id="contactName" name="name" required>
-					</label>
+		<div class="col-lg-3">
+		
+			<div class="card">
+				<div class="container card-block contactSpans">
+					<span>&#9742; &ensp;<a href="tel:209-559-9323">209.559.9323</a></span>
+					<span>&#9993; &ensp;<a href="mailto: kevingoudswaard@gmail.com">kevingoudswaard@gmail.com</a></span>
+					<span><address>&#9873; &ensp;15528 Buena Vista Avenida</br> Sonora, CA 95370</address></span>
 				</div>
-				<div class="form-group col-sm-6">
-					<label for="phone">Phone
-					<input type="phone" class="form-control" id="phone" name="phone">
-					</label>
+				<div class="card-block">
+					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3143.3648815976603!2d-120.30390404871441!3d38.01527220595869!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8090c8d4c77a295d%3A0x58dc13776322684c!2s15528+Buena+Vista+Avenida%2C+Sonora%2C+CA+95370!5e0!3m2!1sen!2sus!4v1507931471322" width="100%" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 				</div>
-			</div><br>
+			</div>		
+		</div>
+		
+		<div class="col-lg-9 card contactCard">
+				<form class="form-inline" action="mail.php" method="post">
+				
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="name">Name
+							<input type="text" class="form-control" id="contactName" name="name" required>
+							</label>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="phone">Phone
+							<input type="phone" class="form-control" id="phone" name="phone">
+							</label>
+						</div>
+					</div><br>
+								
+					<div class="row">
+						<div class="form-group col-sm-6">
+							<label for="email">Email
+							<input type="email" class="form-control" id="email" placeholder='i.e. "you@yourmail.com"' name="email" required>
+							</label>
+						</div>
+						<div class="form-group col-sm-6">
+							<label for="address">Street
+							<input type="text" class="form-control" id="contactAddress" name="address">
+							</label>
+						</div>
+					</div><br>
+					
+					<div class="row">			
+						<div class="form-group col-sm-6">
+							<label>City
+							<input type="text" class="form-control" id="city" name="city">
+							</label>
+						</div>
 						
-			<div class="row">
-				<div class="form-group col-sm-6">
-					<label for="email">Email
-					<input type="email" class="form-control" id="email" placeholder='i.e. "you@yourmail.com"' name="email" required>
-					</label>
-				</div>
-				<div class="form-group col-sm-6">
-					<label for="address">Street
-					<input type="text" class="form-control" id="contactAddress" name="address">
-					</label>
-				</div>
-			</div><br>
-			
-			<div class="row">			
-				<div class="form-group col-sm-3">
-					<label>City
-					<input type="text" class="form-control" id="city" name="city">
-					</label>
-				</div>
-				
-				<div class="form-group col-sm-3">
-				<label for="state">State
-				<select class="form-control" id="state" name="state">
-					<option value="AL">Alabama</option>
-					<option value="AK">Alaska</option>
-					<option value="AZ">Arizona</option>
-					<option value="AR">Arkansas</option>
-					<option value="CA" selected="true">California</option>
-					<option value="CO">Colorado</option>
-					<option value="CT">Connecticut</option>
-					<option value="DE">Delaware</option>
-					<option value="DC">District Of Columbia</option>
-					<option value="FL">Florida</option>
-					<option value="GA">Georgia</option>
-					<option value="HI">Hawaii</option>
-					<option value="ID">Idaho</option>
-					<option value="IL">Illinois</option>
-					<option value="IN">Indiana</option>
-					<option value="IA">Iowa</option>
-					<option value="KS">Kansas</option>
-					<option value="KY">Kentucky</option>
-					<option value="LA">Louisiana</option>
-					<option value="ME">Maine</option>
-					<option value="MD">Maryland</option>
-					<option value="MA">Massachusetts</option>
-					<option value="MI">Michigan</option>
-					<option value="MN">Minnesota</option>
-					<option value="MS">Mississippi</option>
-					<option value="MO">Missouri</option>
-					<option value="MT">Montana</option>
-					<option value="NE">Nebraska</option>
-					<option value="NV">Nevada</option>
-					<option value="NH">New Hampshire</option>
-					<option value="NJ">New Jersey</option>
-					<option value="NM">New Mexico</option>
-					<option value="NY">New York</option>
-					<option value="NC">North Carolina</option>
-					<option value="ND">North Dakota</option>
-					<option value="OH">Ohio</option>
-					<option value="OK">Oklahoma</option>
-					<option value="OR">Oregon</option>
-					<option value="PA">Pennsylvania</option>
-					<option value="RI">Rhode Island</option>
-					<option value="SC">South Carolina</option>
-					<option value="SD">South Dakota</option>
-					<option value="TN">Tennessee</option>
-					<option value="TX">Texas</option>
-					<option value="UT">Utah</option>
-					<option value="VT">Vermont</option>
-					<option value="VA">Virginia</option>
-					<option value="WA">Washington</option>
-					<option value="WV">West Virginia</option>
-					<option value="WI">Wisconsin</option>
-					<option value="WY">Wyoming</option>
-				</select>
-				</label>
-				</div>
-			
-				
-				<div class="form-group col-sm-3">
-					<label>Zip Code
-					<input type="text" class="form-control" id="zip" name="zip">
-					</label>
-				</div>
-			</div>
-			
-			
-			
-			
-			<div class="row">
-				<div class="form-group col-sm-12">
-					<label>Please comment below!</label>
-				</div><br>
-				<div class="form-group col-sm-12">
-					<textarea class="form-control" id="contactComment" rows="6" name="comment" required></textarea>
-				</div>
-			</div>
-			<div class="form-group col-sm-12">
-				<div class="buttonWrap">
-					<button type="submit" name="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
-					<button type="reset" class="btn btn-secondary btn-lg" id="clear">Clear</button>
-				</div>
-			</div>
-		</form>
-		<p class="contactDisclaimer">ATTENTION! QuantumBit Design does not share the information from this contact form with anyone. I practice good business ethic, and strict confidentiality standards, and will only use your contact information to communicate to you regarding your comment or question. Thank you!</br>&#9866; Kevin</p>
+						<div class="form-group col-sm-6">
+						<label for="state">State
+						<select class="form-control" id="state" name="state">
+							<option value="AL">Alabama</option>
+							<option value="AK">Alaska</option>
+							<option value="AZ">Arizona</option>
+							<option value="AR">Arkansas</option>
+							<option value="CA" selected="true">California</option>
+							<option value="CO">Colorado</option>
+							<option value="CT">Connecticut</option>
+							<option value="DE">Delaware</option>
+							<option value="DC">District Of Columbia</option>
+							<option value="FL">Florida</option>
+							<option value="GA">Georgia</option>
+							<option value="HI">Hawaii</option>
+							<option value="ID">Idaho</option>
+							<option value="IL">Illinois</option>
+							<option value="IN">Indiana</option>
+							<option value="IA">Iowa</option>
+							<option value="KS">Kansas</option>
+							<option value="KY">Kentucky</option>
+							<option value="LA">Louisiana</option>
+							<option value="ME">Maine</option>
+							<option value="MD">Maryland</option>
+							<option value="MA">Massachusetts</option>
+							<option value="MI">Michigan</option>
+							<option value="MN">Minnesota</option>
+							<option value="MS">Mississippi</option>
+							<option value="MO">Missouri</option>
+							<option value="MT">Montana</option>
+							<option value="NE">Nebraska</option>
+							<option value="NV">Nevada</option>
+							<option value="NH">New Hampshire</option>
+							<option value="NJ">New Jersey</option>
+							<option value="NM">New Mexico</option>
+							<option value="NY">New York</option>
+							<option value="NC">North Carolina</option>
+							<option value="ND">North Dakota</option>
+							<option value="OH">Ohio</option>
+							<option value="OK">Oklahoma</option>
+							<option value="OR">Oregon</option>
+							<option value="PA">Pennsylvania</option>
+							<option value="RI">Rhode Island</option>
+							<option value="SC">South Carolina</option>
+							<option value="SD">South Dakota</option>
+							<option value="TN">Tennessee</option>
+							<option value="TX">Texas</option>
+							<option value="UT">Utah</option>
+							<option value="VT">Vermont</option>
+							<option value="VA">Virginia</option>
+							<option value="WA">Washington</option>
+							<option value="WV">West Virginia</option>
+							<option value="WI">Wisconsin</option>
+							<option value="WY">Wyoming</option>
+						</select>
+						</label>
+						</div>
+					
+						
+						<div class="form-group col-sm-12">
+							<label>Zip Code
+							<input type="text" class="form-control" id="zip" name="zip">
+							</label>
+						</div>
+					</div>
+					
+					
+					
+					
+					<div class="row">
+						<div class="form-group col-sm-12">
+							<label>Please comment below!</label>
+						</div><br>
+						<div class="form-group col-sm-12">
+							<textarea class="form-control" id="contactComment" rows="6" name="comment" required></textarea>
+						</div>
+					</div>
+					<div class="form-group col-sm-12">
+						<div class="buttonWrap">
+							<button type="submit" name="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+							<button type="reset" class="btn btn-secondary btn-lg" id="clear">Clear</button>
+						</div>
+					</div>
+				</form>
+		</div>
+			<p class="contactDisclaimer">ATTENTION! QuantumBit Design does not share the information from this contact form with anyone. I practice good business ethic, and strict confidentiality standards, and will only use your contact information to communicate to you regarding your comment or question. Thank you!</br>&#9866; Kevin</p>	
 	</div>
-	
-	
-	
-	
 </div>	
+
 	<footer>
-	
 		<div id="footerSection1">
-		<p>&copy; 2017 QuantumBit Design</p>
-		<p>If you have a question about the site, or just simply want to chat, please <a href="contact.html">Contact Me</a>.</p>
-		<p>This site makes use of cookies and log data to optimize your experience while here, and while visiting this site, you agree to have this data collected. Use of the site without permission is prohibited.</p>
+			<p>&copy; 2017 QuantumBit Design</p>
+			<p>This website makes use of cookies and log data to optimize your experience. Upon visiting this site, you agree to have this data collected. Use of the site, or its contents, without permission from the creator, is prohibited.</p>
+			<a href="index.html">Home</a>
+			<a href="about.html">About</a>
+			<a href="sandbox.html">Sandbox</a>
+			<a href="eloquent.html">Eloquent JS</a>
 		</div>
 		<div id="footerSection2">
-		<a href="https://twitter.com/QBit_Design" target="_blank"><img src="images/twitter.png" alt="twitter's icon, a blue bird chirping"></a>
-		<a href="https://www.linkedin.com/in/quantumbitdesign/" target="_blank"><img src="images/linkedin.png" alt="linked in's icon, the word 'in' with a blue background"></a>
-		</div>
-		
+			<a href="https://twitter.com/QBit_Design" target="_blank"><img src="images/twitter.png" alt="twitter logo"></a>
+			<a href="https://www.linkedin.com/in/quantumbitdesign/" target="_blank"><img src="images/linkedin.png" alt="linked in logo"></a>
+		</div>		
 	</footer>
 	
-	
-<script src="quantum.js"></script>
-
+<!-- jquery -->
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+ <!-- Boostrap Ajax js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+ <!-- bootstrap.js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+ <!-- my javascript -->
+<script type="text/javascript" src="quantum.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

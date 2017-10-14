@@ -1,205 +1,53 @@
-  body {font-size: 100%; font: 20px Helvetica, sans-serif; height: 100%; text-align: center;}
-  html {height: 100%;}
+  body {font-size: 100%; font: 20px Helvetica, sans-serif; height: 100%; overflow-x: hidden;}
+  html {height: 100%; display: block; overflow-x: hidden;}
   article { display: block; text-align: center; margin: 0 auto; z-index: 1;}
-  a { color: #1a1aff; text-decoration: none; }
+  a { color: #013b99; text-decoration: none; }
   a:hover { color: #1fded3; text-decoration: none; }
   ul { list-style: none; padding: 0; margin: 0;}
   code {font-family: monospace; color: green; padding: 4px; font-weight: bold;}
   h2 {font-weight: bold; margin: 40px;}
-  header {display: flex; background-image: url("images/header.png"); background-repeat: no-repeat; background-size: 100%; width: 100%; height: 250px;}
-  footer {display: flex; height: 200px; width: 100%; background-color: white; opacity: .50; position: relative; z-index: 3; justify-content: evenly; font-weight: bold; padding: 20px 0; border-top-style: solid; border-top-color: black; border-top-width: 4px;}
-  h1 {font-family: 'Permanent Marker', cursive; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; margin: 32px; color: black;}
-  h3 {font-family: 'Permanent Marker', cursive; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;}
+  header {display: flex; background-image: url("images/header.jpg"); background-repeat: no-repeat; background-size: cover; width: 100%; height: 230px; flex-direction: column; align-items: center; align-content: space-around; max-width: 1700px; margin: 0 auto;}
+  footer {display: flex; height: 125px; width: 100%; background-image: url("images/footer.jpg"); background-repeat: no-repeat; background-size: cover; flex-direction: row; align-items: center; justify-content: space-evenly; max-width: 1700px; margin: 0 auto; text-align: center;}
+  h1, h2, h3, h4, h5, h6 {font-family: 'Permanent Marker', cursive; text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white; color: black;}
   label { margin: 10px; font-family: Baloo, cursive;}
   input, select {margin-left: 15px;}
-  
-
-  
+  p {font-family: 'Exo 2', sans-serif;}
 
 
   .pageWrapper {
 	  max-width: 1700px;
-	  margin-left: auto;
-	  margin-right: auto;
-	  position: relative;
-	  padding-bottom: 200px;
-	  z-index: 3;
-	  background: linear-gradient(to top, #FFFFFF 50%, #000000 110%); background-repeat: no-repeat;
-	  text-align: center;
-	  min-height: calc(100vh - 200px);
-  }
-  
-  .homePageWrapper {
+	  width: 100%;
 	  margin: 0 auto;
-	  max-width: 100%;
-	  display: hidden;
-	  position: relative;
-	  z-index: 3;
-	  background: none;
-	  text-align: center;
-	  min-height: calc(100vh - 150px);
+	  background-image: url("images/darkwood-background.jpg");
+	  background-size: contain;
+	  min-height: calc(100vh - 125px);
   }
 
-
-  
-  
-  
-  
-  
-  
-  
-  
- /************************* Home Page Styling ***************************/
-  
-     
-  #backgroundVideo {
-	position: fixed;
-    top: 50%; left: 50%;
-    z-index: 2;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    transform: translate(-50%, -50%);
-}
-
-	
-	.rightTab {
-		display: block;
-		position: fixed;
-		top: 25%;
-		right: 0;
-		width: 30px;
-		height: 400px;
-		background-color: gray;
-		text-align: right;
-		border-radius: 28px 0px 0px 28px / 66px 0px 0px 66px;
-		border-top-width: 4px;
-		border-left-width: 4px;
-		border-bottom-width: 4px;
-		border-top-style: solid;
-		border-left-style: solid;
-		border-bottom-style: solid;
-		border-top-color: black;
-		border-left-color: black;
-		border-bottom-color: black;
-		transition: 0.5s ease-in;
-	    -webkit-transition: 0.5s;
-        -moz-transition: 0.5s;
-        -o-transition: 0.5s;
-		cursor: pointer;
-		z-index: 900;
-		padding: 190px 0;
-	}
-	
-	.rightTab:hover {
-		color: white;
-	}
-	
-	.rightTabContent {
-	  font-family: 'Permanent Marker', cursive;
-      height: 400px;
-      width: 0;
-      position: fixed;
-      z-index: 900;
-      top: 25%;
-      right: 0;
-      background-color: gray;
-	  border-top-width: 4px;
-	  border-bottom-width: 4px;
-	  border-top-style: solid;
-	  border-bottom-style: solid;
-	  border-top-color: black;
-	  border-bottom-color: black;
-      overflow-x: hidden;
-      transition: 0.5s ease-in;
-	  -webkit-transition: 0.5s;
-      -moz-transition: 0.5s;
-      -o-transition: 0.5s;
-	  color: #000000;
-	  text-align: center;
-	  display: flex;
-	  flex-direction: column;
-	  justify-content: space-evenly;
-	  margin: 0 auto;
-}
-	
-	.rightTabContent a {
-		color: white;
-	}
-	
-	.rightTabContent a:hover, .offcanvas a:focus{
-	  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
-}
-	  
-	.rightTabContent .closebtn {
-      position: absolute;
-      top: 0;
-      right: 10px;
-      font-size: 1.2em;
-	  background: none;
-}
-	
-	.rightTabContent img {
-		width: 68px;
-		height: 68px;
-	}
-	
-	.rightTabContent img:hover {
-		opacity: .70;
-	}
-	
-	.homePageContactInfo {
-		position: fixed;
-		display: flex;
-		justify-content: space-evenly;
-		flex-direction: row;
-		flex-wrap: wrap;
-		right: 0;
-		margin: 25px;
-		z-index: 5;
-		border: 4px solid black;
-		border-radius: 20px;
-		background-color: gray;
-	}
-	
-	.homePageContactInfo span {
-		margin: 15px 25px 0 25px;
-		display: inline-block;
-		color: black;
-		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-		font-family: 'Baloo', cursive;
-	}
-	
-
-	
-	
-	
-	
-	
-  
-  /************************* Navigation Styling ***************************/
-  
-
-  .sideNav {
-      height: 100%;
-      width: 0;
-      position: fixed;
-      z-index: 900;
-      top: 0;
-      left: 0;
-      background-image: url("images/woodbackground.jpg");
-      overflow-x: hidden;
-      padding-top: 60px;
-      transition: 0.5s ease-in;
-	  -webkit-transition: 0.5s;
-      -moz-transition: 0.5s;
-      -o-transition: 0.5s;
-	  color: #000000;
-	  text-align: center;
-}
-
-  #overlay {
+   header p {
+	   font-family: 'Racing Sans One', cursive;
+	   font-size: 2.4rem;
+	   padding: 0;
+	   color: #fbff91;
+	   display: block;
+	   text-shadow: -1.1px 0 #000, 0 1.1px #000, 1.1px 0 #000, 0 1.1px #000;
+	   margin: 40px 0 0 0;
+   }
+   
+   header p:first-child {
+	   margin-bottom: 20px;
+   }
+   
+   header p:nth-of-type(2) {
+	   font-size: 1.4rem;
+	   align-self: auto;
+	   margin: 0;
+   }
+   .headerClick {
+	   display: block;
+	   text-align: center;
+   }
+   
+      #overlay {
 	  position: fixed;
       display: none;
       width: 100%;
@@ -212,98 +60,279 @@
       z-index: 899;
       cursor: pointer;
   }
+  .introParagraph {
+	  margin: 30px;
+	  font-size: 1.0em;
+  }
+  .centerH2 {
+	text-align: center;
+	min-width: 100%;
+  }
+  
 
-/* The navigation menu links */
-  .sideNav a {
+
+
+  
+  
+ /************************* Home Page Styling ***************************/
+  
+  
+      .profile-card {
+	  margin-bottom: 20px;
+  }
+  .profile-card img {
+	  max-width: 100%;
+	  max-height: 426px;
+	  min-height: 300px;
+	  margin: 0 auto;
+  }
+  .profile-card h4, .skills-card h4 {
+	  font-family: 'Permanent Marker', cursive;
+  }
+  .card {
+	  box-shadow: inset 0 0 4em #fcff4f, 0px 16px 16px -6px #000;
+	  background-color: #eff2ab;
+	  text-align: center;
+	  padding: 15px;
+	  margin: 15px;
+  }
+  .btn {
+	  background-color: black;
+	  border: 2px solid #f7f476;
+	  border-radius: 8px;
+	  color: #f7f476;
+  }
+  .btn:hover {
+	  background-color: black;
+	  border: 2px solid #f7f476;
+	  border-radius: 8px;
+	  color: #76a014;
+	  border-color: #76a014;
+  }
+  .skills-card {
+	  margin-bottom: 20px;
+  }
+  .skills-card img {
+	  max-width: 100%;
+	  height: 100px;
+	  margin: 0 auto;
+  }
+     
+  #teaserVideo {
+    width: 100%;
+    max-height: 450px;
+}
+	
+	.rightTab{
+	  display: none;
+	  flex-direction: row;
+	  justify-content: center;
+	  position: fixed;
+	  font-family: 'Permanent Marker', cursive;
+      height: 175px;
+      width: 0;
+      top: 50%;
+      right: 0;
+      background-image: url("images/wooden-background.jpg");
+	  background-repeat: no-repeat;
+	  background-size: initial;
+	  background-position: -60px 0;
+	  border: 2px solid black;
+	  border-right: none;
+	  border-left: none;
+	  margin: 0 auto;
+	  z-index: 900;	  
+}
+	.rightTabClickElement {
+	  display: flex;
+	  flex-direction: column;
+	  justify-content: center;
+	  color: #eff2ab;
+	  height: 175px;
+      width: 30px;
+	  position: fixed;
+	  top: 50%;
+      right: 0;
+	  background-image: url("images/wooden-background.jpg");
+	  background-repeat: no-repeat;
+	  background-size: initial;
+	  background-position: -30px 0;
+	  border: 2px solid black;
+	  border-radius: 9px 0px 0px 9px / 18px 0px 0px 18px;
+	  border-right: none;
+	  z-index: 900;
+	  cursor: pointer;
+	}
+	
+	.rightTabClickElement p {
+		display: block;
+		margin: 0 0 15px;
+		font-size: 0.9rem;
+		transform: rotate(90deg);
+		text-shadow: -0.6px 0 black, 0 0.6px black, 0.6px 0 black, 0 -0.6px black;
+		letter-spacing: 1px;
+	}
+	  
+	.closebtn {
+	  position: absolute;
+      top: 0;
+      right: 10px;
+      font-size: 1.4em;
+	  background: none;
+	  color: black;
+	  text-shadow: -0.6px 0 white, 0 0.6px white, 0.6px 0 white, 0 -0.6px white;
+	  font-family: 'Permanent Marker', cursive;
+	  cursor: pointer;
+}
+	.homePageContactInfo {
+		display: flex;
+		justify-content: space-evenly;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		order: 2;
+		height: 100%;
+	}
+	
+	.homePageContactInfo span {
+		display: inline-block;
+		color: black;
+		text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+		font-family: 'Baloo', cursive;
+		font-size: 1.2rem;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.introSection {
+		color: white;
+		padding: 0;
+		margin: 0;
+	}
+	.carousel {
+		display: none;
+	}
+  
+  /************************* Navigation Styling ***************************/
+  
+
+  .dropNav {
+	  display: none;
+	  width: 100%;
+	  height: 350px;
+      position: absolute;
+      background-image: url("images/nav-background.jpg");
+	  background-repeat: no-repeat;
+	  background-size: 100% auto;
+	  text-align: center;
+	  z-index: 900;
+	  max-width: 1700px;
+	  margin: 0 auto;
+} 
+
+  .dropNav a {
       text-decoration: none;
 	  font-family: 'Permanent Marker', cursive;
-      font-size: 1.2em;
+      font-size: 1.5rem;
+	  line-height: 92%;
       color: white;
       display: block;
       transition: 0.5s;
 	  -webkit-transition: 0.5s;
       -moz-transition: 0.5s;
       -o-transition: 0.5s;
-	  background-image: url("images/nav sign.png");
-	  background-repeat: no-repeat;
-	  background-size: cover;
-	  -webkit-background-origin: border;
+	  margin: 28px 0;
+	  text-shadow: -1.5px 0 black, 0 1.5px black, 1.5px 0 black, 0 -1.5px black;
+	  padding: 3.5px 0;
+}
+  .dropNav a:hover  {
+	color: darkgray;
+	
+  }
+  .dropNav li {
+	width: 100%;
+	display: block;
 }
 
-  #home, #contact, #about {
-	padding: 108px 5px 48px;
-}
-
-  #sandbox {
-	padding: 100px 5px 45px;
-	font-size: 1.0em;
-}
-
-  #eloquent {
-	padding: 95px 5px 45px;
-	font-size: 1.0em;
-	margin-bottom: 80px;
+  #navHamburger {	  
+	width: 1.4em;
+	height: 1.4em;
+	position: relative;
+	margin: auto 0;
+	-webkit-transform: rotate(0deg);
+	-moz-transform: rotate(0deg);
+	-o-transform: rotate(0deg);
+	transform: rotate(0deg);
+	-webkit-transition: .5s ease-in-out;
+	-moz-transition: .5s ease-in-out;
+	-o-transition: .5s ease-in-out;
+	transition: .5s ease-in-out;
+	z-index: 900;
+	border: none;
   }
   
-
-  .sideNav a:hover, .offcanvas a:focus{
-      color: white;
-	  text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
-}
-
-
-  .sideNav .closebtn {
-      position: absolute;
-      top: 0;
-      right: 25px;
-      font-size: 2.0em;
-      margin-left: 35px;
-	  background: none;
-}
-
-  #navHamburger {
+  #navHamburger span {
 	  display: block;
-	  position: fixed;	  
-	  cursor: pointer;
-	  width: 2.0em;
-	  height: 2.0em;
-	  margin: 30px 0 0 30px;
-	  font-size: 1.5em;
-	  font-weight: bold;
-	  transition: background-color 0.5s, border-color 0.5s, color 0.5s, transform 1s;
-	  -webkit-transition: background-color 0.5s, border-color 0.5s, color 0.5s, -webkit-transform 1s;
-	  background-color: gray;
-	  color: black;
-	  border: 4px solid black;
-	  border-radius: 15px;
-	  padding: 5px 0 0 0;
-	  z-index: 6;
+	  position: absolute;
+	  height: 5px;
+	  width: 100%;
+	  background: #eff2ab;
+	  border-radius: 9px;
+	  opacity: 1;
+	  left: 0;
+	  -webkit-transform: rotate(0deg);
+	  -moz-transform: rotate(0deg);
+	  -o-transform: rotate(0deg);
+	  transform: rotate(0deg);
+	  -webkit-transition: .25s ease-in-out;
+	  -moz-transition: .25s ease-in-out;
+	  -o-transition: .25s ease-in-out;
+	  transition: .25s ease-in-out;
+	  z-index: 900;
+}
+
+#navHamburger:hover {
+	cursor: pointer;
+}
+
+#navHamburger span:nth-child(1) {
+  top: 0px;
+}
+
+#navHamburger span:nth-child(2),#navHamburger span:nth-child(3) {
+  top: 12px;
+}
+
+#navHamburger span:nth-child(4) {
+  top: 24px;
+}
+
+#navHamburger.open span:nth-child(1) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+
+#navHamburger.open span:nth-child(2) {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+#navHamburger.open span:nth-child(3) {
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+#navHamburger.open span:nth-child(4) {
+  top: 18px;
+  width: 0%;
+  left: 50%;
+}
+.nav-phoneNumber {
+	  display: none;
   }
-  
-  #navHamburger:hover {
-	  background-color: black;
-	  border-color: white;
-	  color: white;
-	  -webkit-transform: rotate(180deg);
-	  transform: rotate(180deg);
-  }
-  
-  .sideNav::-webkit-scrollbar {
-    width: 14px;
-}
- 
-  .sideNav::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.8); 
-    border-radius: 10px;
-}
- 
-  .sideNav::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    -webkit-box-shadow: inset 0 0 8px rgba(0,0,0,0.5); 
-}
-
-
-
 
 
 
@@ -315,21 +344,34 @@
   #footerSection1 {
 	  order: 1;
 	  width: 80%;
+	  height: 100%;
 	  margin: 0 auto;
-	  padding: 0 20px;
+	  font-size: 0.6rem;
+	  color: #fcfaa1;
+	  text-shadow: -0.4px 0 black, 0 0.4px black, 0.4px 0 black, 0 0.4px black;
+  }
+  
+  #footerSection1 p {
+	  margin: 16px 12px;
+  }
+  #footerSection1 a {
+	  margin: 0 12px;
   }
   
   #footerSection2 {
+	  display: flex;
+	  flex-direction: column;
+	  flex-wrap: nowrap;
+	  justify-content: space-evenly;
 	  order: 2;
 	  width: 20%;
-	  margin: 0 auto;
-	  padding-top: 35px;
+	  height: 100%;
+	  padding: 12px;
   }
   
   #footerSection2 img {
-	  width: 80px;
-	  height: 80px;
-	  margin: 10px;
+	  width: 60px;
+	  height: 60px;
   }
   
   
@@ -347,54 +389,6 @@
   /************************* Eloquent JS Page Styling*************************/
   
   
-  .introParagraph {
-	  margin: 30px;
-	  font-size: 1.0em;
-  }
-  
-  
-  .eloquentIntroMainWrap {
-	  display: flex;
-	  flex-direction: row;
-	  flex-wrap: wrap;
-	  justify-content: space-evenly;
-	  align-items: baseline;
-	  margin: 40px;
-  }
-  .eloquentIntroSubWrap {
-	  display: flex;
-	  flex-direction: column;
-	  flex-wrap: wrap;
-	  justify-content: center;
-	  align-items: baseline;
-	  width: 66%;
-  }
-  
-  #qotdHeader {
-	  margin: 30px 0 0 0;	  
-  }
-  
-  #qotdStyle {
-	  border-radius: 53px 27px 85px 87px / 18px 16px 25px 127px;
-	  margin: 10px 10px 0 0;
-  }
-  
-  .eloquentIntroParagraph {
-	  border: 4px solid black;
-	  border-radius: 87px 85px 27px 53px / 127px 25px 16px 18px;
-	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	  margin: 0 10px 0 0;
-	  background-color: #dc8100;
-	  color: black;
-  }
-  .eloquentIntroPSSection {
-	  width: 34%;
-	  border: 4px solid black;
-	  border-radius: 85px 16px 106px 14px / 25px 26px 54px 14px;
-	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	  background-color: #dc8100;
-	  color: black;
-  }
   
   .logoPic {
 	  width: 75%;
@@ -403,86 +397,52 @@
 	  border-radius: 50px 50px 50px 50px / 25px 25px 25px 25px;
   }
   
-  .treehouseAd {
-	  width: 75%;
-	  height: 45%;
-	  margin: 0 0 40px 0;
-	  border: 4px solid black;
-	  border-radius: 50px 50px 50px 50px / 25px 25px 25px 25px;
-  }
- 
-  
-  .challengeTitle {
-	  font-weight: bold;
-	  padding: 0 0 15px 0;
-	  color: black;
-  }
-  
   .codeContainer {
+	  width: 100%;
 	  text-align: left;
-	  margin: 20px 20px 45px 20px;
 	  background-image: url("images/Wrenches.png");
 	  background-repeat: no-repeat;
 	  background-position: 50% top;
+	  font-size: 1.0rem;
   }
-  
-  .codeSectionWrapper {
-	  border: 4px solid black;
-	  border-radius: 50px 50px 50px 50px / 25px 25px 25px 25px;
-	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	  margin: 40px;
-	  background-color: #dc8100;
-	  color: black;
-	  padding: 25px;
-	  
-  }
- 
- 
-  
-  
-  
-  
-  
+  .eloquentWrapper {
+	justify-content: center;
+	}
   
   
   
   /************************* About Me Page Styling ***************************/
   
+  .aboutMe {
+	  font-size: 1.0rem;
+	  padding: 10px;
+  }
+  .aboutMePic {
+	max-width: 100%;
+	min-height: 320px;
+	max-height: 500px;
+  }
+  .aboutMeCard, .aboutQuantumCard {
+	max-width: 1233px;
+  }
   .aboutMeWrapper {
-	  display: flex;
-	  margin: 30px 30px 0 30px;
-	  color: black;
-	  background-color: #dc8100;
-	  font-size: 1.0em;
-	  padding: 25px;
-	  border: 4px solid black;
-	  border-radius: 30px;
-	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	  overflow: auto;
-	  min-width: 400px;
+	justify-content: center;
+  }
+  .aboutMeMountains {
+	width: 100%;
+	justify-content: center;
+  }
+  .aboutQuantumCard {
+	margin-bottom: 40px;
+  }
+  .aboutMeMountains img {
+	margin: -35px 0;
+  }
+  .aboutMe h4 {
+	margin: 0 20px 20px 20px;
   }
   
-  .aboutMeWrapper img {
-	  float: left;
-	  margin: 0 20px 20px 0;
-	  border-radius: 30px;
-	  border: 4px solid black;
-  }
   
-   .aboutMeText {
-	  margin: 20px 20px 0 20px;
-  }
-  
-  .aboutMeBackground {
-	  margin: 40px 20px 40px 20px;
-  }
-  
-  #aboutQuantum img {
-	  float: right;
-	  margin: 0 0 20px 20px;
-	  border-radius: 30px;
-	  border: 4px solid black;
-  }
   
   
   
@@ -494,23 +454,24 @@
   
    /********************** Javascript Sandbox Styling ************************/
   
-  
+  .sandboxWrap {
+	justify-content: center;
+	padding-bottom: 20px;
+  }
   .sandBoxItem {
 	  text-align: left;
-	  margin: 30px 30px 0 30px;
-	  color: black;
-	  background-color: #dc8100;
-	  font-size: 1.0em;
-	  padding: 25px;
-	  border: 4px solid black;
-	  border-radius: 30px;
-	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
+	  font-size: 1.0rem;
+	  border-radius: 1.0rem;
+	  box-shadow: inset 0 0 4em #fcff4f, 0px 16px 16px -6px #000;
+	  background-color: #eff2ab;
+	  padding: 15px;
+	  margin: 15px;
   }
  
   .launchWrapper {
 	  display: flex;
 	  flex-direction: row;
-	  justify-content: space-between;
+	  justify-content: space-evenly;
 	  flex-wrap: wrap;
   }
   
@@ -537,7 +498,7 @@
 	  display: inline-block;
 	  position: relative;
 	  transition: 0.5s;
-	  font-family: 'Lalezar', cursive;
+	  font-family: 'Permanent Marker', cursive;
   }
   
   #launchButton span:after {
@@ -570,8 +531,8 @@
 	  outline: 0;
   }
   
-  .logoWrapper {
-	  margin-right: 25px;
+  .logoWrapper p {
+	  text-align: center;
   }
   
   .logoWrapper img {
@@ -583,8 +544,8 @@
   }
   
   #codepenInfo {
-	  font-size: 0.7em;
-	  color: white;
+	  font-size: 0.8rem;
+	  color: black;
 	  margin: 0 0 5px 0;
   }
   
@@ -599,32 +560,20 @@
   /****************************Contact Page Styling ***************************/
 
 .contactWrapper {
-	padding: 25px;
-	background-color: #dc8100;
-	margin: 25px auto;
-	border: 4px solid black;
-	border-radius: 30px;
-	box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	display: flex;
 	justify-content: center;
-	min-width: 900px;
-	flex-wrap: wrap;
-	
+}  
+  
+.contactCard {
+	max-width: 775px;
 }
-
 .contactDisclaimer {
 	font-size: 1.0em;
 	font-family: Baloo, cursive;
 	padding: 10px 0;
 	margin: 25px auto;
-	color: black;
+	color: white;
 	width: 90%;
-	display: block;
 	text-align: center;
-}
-
-.formContainer {
-	margin: 0 auto;
 }
 
 .form-group {
@@ -665,6 +614,21 @@ textarea.form-control {
 	flex-grow: 1;
 	margin: 10px;
 }
+
+.contactSpans {
+	justify-content: space-evenly;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	padding: 0;
+}
+.contactSpans span {
+	display: block;
+	margin: 10px;
+	font-size: 1.0rem;
+}
+.col-lg-3 {
+	padding: 0;
+}
   
   
   
@@ -678,199 +642,78 @@ textarea.form-control {
   
    /********************** Mail PHP Page Styling *************************/
   
-  .mailMainContent{
-	padding: 25px;
-	max-width: 80%;
-	background-color: #dc8100;
-	margin: 20px auto;
-	border: 4px solid black;
-	border-radius: 30px;
-	box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-  }
-  
-  .mailMainContent h3 {
-	  font-family: Baloo, cursive;
-  }
+
   
   
-  
-  
-  
-  
-  
-  
-  
+    
   
   
    /********************** List App Styling *************************/
    
-  .listAppContent {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-	align-items: center;
-	justify-content: evenly;
-	border: 4px solid black;
-	border-radius: 30px;
-	box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	background-color: #dc8100;
-	padding: 5px;
-	max-width: 80%;
-	margin: 0 auto;
+  .listMainWrap {
+	justify-content: center;
+   }
+   
+  .listAppWrapper {
+	width: 100%;
   }
   
-  .listAppContent h5 {
-	  margin: 25px;
-	  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-	  font-family: 'Permanent Marker', cursive;
-  }
-  
-  .listSection1 {
-	  order: 1;
-	  margin: 20px;
-  }
-  
-  .listSection2 {
-	  order: 2;
-	  margin: 20px;
-  }
-  
-  #list {
+  .list {
 	  display: block;
-	  width: 500px;
-	  height: 700px;
-	  background: url("images/notepad.png");
+	  width: 100%;
+	  height: 385px;
+	  background: url("images/note.svg");
 	  background-repeat: no-repeat;
 	  background-size: 100%;
-	  max-width: 90%;
-	  max-height: 90%;
-	  padding: 55px 35px;
-	  text-align: left;
-	  
-  }
-  
-  #list li {
-	  text-decoration: none;
+	  padding: 7% 7% 49% 7%;
+	  text-align: left; 
 	  font-size: 1.0em;
-	  font-weight: bold;
-	  margin: 20px;
-	  
   }
   
-  .buttonWrapper {
-	  display: flex;
-	  flex-direction: column;
-	  flex-wrap: wrap;
-	  align-items: center;
-	  margin: 25px;
-	  padding: 5px;
-	  max-width: 600px;
-	  max-width: 90%;
-	  max-height: 90%;
-	  background-size: 100%;
+  .list li {
+	  text-decoration: none;
+  }
+  #listTextField {
+	  margin: 0 0 15px 0;
   }
   
-  .buttonWrapper input {
-	  margin: 20px;
-	  width: 80%;
-  }
-  
-  .buttonWrapper button:nth-of-type(2) {
-	  background-color: #ff0000;
-  }
-  
-  .buttonWrapper button:nth-of-type(3) {
-	  background: url("images/nuke.png");
-	  background-color: #b33c00;
-	  background-repeat: no-repeat;
-	  background-size: contain;
-	  background-position: left;
-	  font-weight: bold;
-	  padding: 15px;
-	  
-  }
-  
-  .buttonWrapper button {
-	  padding: 10px;
-	  border: 4px solid black;
-	  border-radius: 10px;
-	  width: 80%;
-	  background-color: green;
-	  cursor: pointer;
-	  margin: 10px;
-  }
-  
-  .buttonWrapper button:hover {
-	background-color: #42f4a1;
-  }
-  
-  .buttonWrapper button:nth-of-type(2):hover {
-	  background-color: #ff6666;
-  }
-  
-  .buttonWrapper button:nth-of-type(3):hover {
-	  background-color: #ff7733;
-  }
-  
-  
-  
+
   
   /***************** Rock, Paper, Scissors Styling *******************/
-  
-  .wrapper {
-	  border: 4px solid black;
-	  border-radius: 30px;
-	  box-shadow: inset 0 0 2em #984B43, 0px 20px 5px -8px #233237;
-	  background-color: #dc8100;
-	  display: flex;
-	  justify-content: space-around;
-	  flex-direction: row;
-	  align-items: center;
-	  flex-wrap: wrap;
-	  margin: 35px auto;
-	  border: 5px solid black;
-	  max-width: 65%;
-	  height: 400px;
-}
-
-  .wrapper img {
-	  width: 200px;
-	  height: 200px;
+  .rpsMainWrap {
+	justify-content: center;
+  }
+  .rpsWrapper {
+	  width: 100%;
+	  justify-content: evenly;
+	  flex-direction: column;
+	  font-size: 1.0rem;
   }
 
-.playerChoice, .computerChoice {
-	
-  border: 5px solid black;
-  width: 210px;
-  display: flex;
-  flex-direction: column;
-}
-
-
-
-.interfaceWrapper {
-  border: 5px solid black;
-  margin: 10px;
-  width: 200px;
-  height: 325px;
-  text-align: center;
-  font-family: 'Baloo', cursive;
-  font-size: 0.9em;
-}
-
-#resultMessage {
-	font-size: 1.5em;
-	color: black;
-	padding: 10px;
-}
-
-.wrapper h5 {
-	  margin: 25px;
-	  text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
-	  font-family: 'Permanent Marker', cursive;
-	  order: 0;
+  .rpsWrapper img {
+	  width: 100%;
+	  height: 285px;
   }
-  
+
+  #battle {
+	margin-bottom: 20px;
+  }
+  #selector {
+	margin-top: 15px;
+  }
+  .rpsHeading {
+	padding: 12px;
+  }
+  .playerChoice {
+	margin: 0 0 20px 0;
+  }
+  .scoreWrapper {
+	justify-content: space-around;
+	margin-top: 20px;
+  }
+  .scoreWrapper div {
+	  padding: 10px;
+  }
   
   
   

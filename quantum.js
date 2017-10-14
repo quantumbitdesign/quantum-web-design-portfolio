@@ -1,104 +1,121 @@
 //variables
+$(document).ready(function(){
 
 let vid = document.querySelector("#backgroundVideo");
-let nav = document.querySelector("#mainSideNav");
 let allContent = document.querySelector(".pageWrapper");
-let allIndexHTMLContent = document.querySelector(".homePageWrapper");
 let overlay = document.querySelector("#overlay");
+
 let rightTabContent = document.querySelector(".rightTabContent");
 let rightTab = document.querySelector(".rightTab");
 let footer = document.querySelector("footer");
+
 let list = document.querySelector("#list");
 let newListItemValue = document.querySelector("#listTextField");
-const e = document.querySelector("#selector");
+let addListItem = document.querySelector("#addItemButton");
+let removeListItem = document.querySelector("#removeItemButton");
+let removeAllItems = document.querySelector("#nukeItemsButton");
+
+const choice = document.querySelector("#selector");
 let playerChoice = document.querySelector(".playerChoice");
 let computerChoice = document.querySelector(".computerChoice");
+let timesPlayed = document.querySelector("#playCount");
+let computerScore = document.querySelector("#computerScore");
+let playerScore = document.querySelector("#playerScore");
+let playCount = 0;
+let playerWinCount = 0;
+let computerWinCount = 0;
 
 
 
+//                //                 Navigation 
 
 
-
-
-//                  //                 Navigation JS
-
-const overlayActivate = () => {
-	overlay.style.display = "block";
-}
-
-const indexOverlayKill = () => {
-	if ((nav.style.width = "300px") && (allIndexHTMLContent.style.marginLeft = "310px")) {
-		nav.style.width = "0";
-		allIndexHTMLContent.style.marginLeft = "auto";
-		footer.style.marginLeft = "auto";
+$("#navHamburger").on( "click", function() {
+	$(this).toggleClass('open');
+	if ($(".dropNav").css("display") === "none") {
+		$(".dropNav").slideDown("slow").show("slow");
+		$(".pageWrapper").animate({ marginTop: "350px" }, 600 );
+		$("#overlay").css("display", "block");
+	} else {
+		$(".dropNav").slideUp("slow").hide("slow");
+		$("#overlay").css("display", "none");
+		$(".pageWrapper").animate({ marginTop: "0" }, 600 );
+		$(this).removeClass('open');
 	}
-	rightTabContent.style.width = "0";
-	allIndexHTMLContent.style.marginRight = "auto";
-	rightTab.style.right = "0";
-    overlay.style.display = "none";
-}
-
-const overlayKill = () => {
-	if ((nav.style.width = "300px") && (allContent.style.marginLeft = "300px")){
-		nav.style.width = "0";
-		allContent.style.marginLeft = "auto";
-		footer.style.marginLeft = "auto";
-	}
-    overlay.style.display = "none";
-}
-
-
-const openNav = () => {
-    nav.style.width = "300px";
-	allContent.style.marginLeft = "300px";
-	footer.style.marginLeft = "300px";
-	overlayActivate();
-}
-
-const closeNav = () => {
-    nav.style.width = "0";
-	allContent.style.marginLeft = "auto";
-	footer.style.marginLeft = "auto";
-	overlayKill();
-}
-
-const indexOpenNav = () => {
-    nav.style.width = "300px";
-	allIndexHTMLContent.style.marginLeft = "310px";
-	footer.style.marginLeft = "300px";
-	overlayActivate();
-}
-
-const indexCloseNav = () => {
-    nav.style.width = "0";
-	allIndexHTMLContent.style.marginLeft = "auto";
-	footer.style.marginLeft = "auto";
-	indexOverlayKill();
-}
-
-
-
-
-
-
+});
 
 //                     //          Right Tab Pop Out JS
 
-const openTab = () => {
-    rightTabContent.style.width = "110px";
-	rightTab.style.right = "110px";
-	allIndexHTMLContent.style.marginRight = "125px";
-	overlayActivate();
-}
 
-const closeTab = () => {
-    rightTabContent.style.width = "0";
-	rightTab.style.right = "0";
-	allIndexHTMLContent.style.marginRight = "auto";
-	indexOverlayKill();
-}
+$(".tabOpener").on( "click", function() {
+	if ($(".rightTab").css("display") === "none") {
+		$(".rightTab").show().animate({
+			width: "330px"
+		}, 600);
+		$(".rightTabClickElement").animate({
+			right: "328px"
+		}, 600);
+		$("#overlay").css("display", "block");
+	} else {
+		$("#overlay").css("display", "none");
+		$(".rightTab").animate({
+			width: "0"
+		}, 600);
+		$(".rightTabClickElement").animate({
+			right: "0"
+		}, 590);
+		$(".rightTab").hide(600);
+	}
+});
 
+$(".closebtn").on( "click", function() {
+		$("#overlay").css("display", "none");
+		$(".rightTab").animate({
+			width: "0"
+		}, 600);
+		$(".rightTabClickElement").animate({
+			right: "0"
+		}, 590);
+		$(".rightTab").hide(600);
+		
+});
 
+$("#overlay").on( "click", function() {
+	if (window.matchMedia("(max-width: 991px)").matches) {
+		// If screen size is mobile or tablet..
+		$(".dropNav").slideUp("slow").hide("slow");
+		$("#overlay").css("display", "none");
+		$(".pageWrapper").animate({ marginTop: "0" }, 600 );
+		$("#navHamburger").removeClass('open');
+		$(".rightTab").animate({
+			width: "0"
+		}, 600);
+		$(".rightTabClickElement").animate({
+			right: "0"
+		}, 590);
+		$(".rightTab").hide(600);	
+
+	} else {
+		/* If screen size is a desktop.. */
+		$("#overlay").css("display", "none");
+		$(".rightTab").animate({
+			width: "0"
+		}, 600);
+		$(".rightTabClickElement").animate({
+			right: "0"
+		}, 590);
+			$(".rightTab").hide(600);
+	}
+});
+
+$(window).resize(function(){
+		if (window.matchMedia("(min-width: 992px)").matches) {
+		$(".dropNav").css("display", "flex");
+	} else {
+		$(".dropNav").css("display", "none");
+		
+	}
+});
 
 
 
@@ -107,24 +124,30 @@ const closeTab = () => {
 //                  //           List App JS
 
 
-
-const addNewEntry = () => {
+$(addListItem).click(function(){
 	let listItem = newListItemValue.value;
 	let newEntry = document.createElement("li");
 	newEntry.textContent = listItem;
 	list.appendChild(newEntry);
 	document.querySelector("#listTextField").value = "";
-}
+});
+	
+$("#listTextField").keypress(function(e){
+	if(e.which == 13){
+		$(addListItem).click();
+	}
+});
 
-const removeNewEntry = () => {
+
+$(removeListItem).click(function(){
 	let lastEntry = list.lastChild;
 	list.removeChild(lastEntry);
-}
+});
 
- const nuke = () => {
+
+$(removeAllItems).click(function(){
 	list.innerHTML = "";
-}
-
+});
 
 
 
@@ -137,11 +160,13 @@ const removeNewEntry = () => {
 const playerWin = () => {
 	playerChoice.style.backgroundColor = "green";
 	computerChoice.style.backgroundColor = "red";
+	playerWinCount += 1;
 }
 
 const playerLose = () => {
 	playerChoice.style.backgroundColor = "red";
 	computerChoice.style.backgroundColor = "green";
+	computerWinCount += 1;
 }
 
 const tie = () => {
@@ -149,9 +174,9 @@ const tie = () => {
 	computerChoice.style.backgroundColor = "green";
 }
 
+$("#battle").click(function() {
 
-const battleSim = () => {
-  let playerChoice = e.options[e.selectedIndex].value;
+  let playerChoice = choice.options[choice.selectedIndex].value;
   let messageText = document.querySelector("#resultMessage");
   let compChoice = Math.floor(Math.random() * (4 - 1) + 1);
   
@@ -212,7 +237,11 @@ const battleSim = () => {
       resultMessage.innerHTML = "computer wins, scissors cut paper!";
 	  playerLose();
     }
-}
+	playCount += 1;
+	timesPlayed.innerHTML = playCount;
+	playerScore.innerHTML = playerWinCount;
+	computerScore.innerHTML = computerWinCount;
+});
 
 
 
@@ -228,6 +257,8 @@ const vidLoad = () => {
   });
 }
 
+
+});
 
 
 

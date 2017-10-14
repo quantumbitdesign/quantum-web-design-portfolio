@@ -1,67 +1,200 @@
-<!doctype html>
-<html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<link href="https://fonts.googleapis.com/css?family=Baloo" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
-	<link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-	<link rel="stylesheet" href="stylecss.css">
-	<link rel="stylesheet" href="responsivecss.css">
-</head>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta http-equiv="x-ua-compatible" content="IE=edge">
+		<meta name="description" content="This is a portfolio to showcase what I have learned in front-end development, and to provide a place for people to get to know me more.">
+		<meta name="keywords" content="quantumbit, quantumbitdesign.com, portfolio">
+		<meta name="author" content="Kevin Goudswaard, Twitter @QBit_Design">
+		<link href="https://fonts.googleapis.com/css?family=Baloo|Permanent+Marker|Racing+Sans+One|Ubuntu|Exo+2" rel="stylesheet">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+		<link rel="stylesheet" href="stylecss.css">
+		<link rel="stylesheet" href="responsivecss.css">
+		<title>QuantumBit Web Solutions</title>
+	</head>
 	
-<title>QuantumBit Web Solutions</title>
-
-<video muted loop id="backgroundVideo">
-<source src="video/quantumvid.mp4" type="video/mp4">
-</video>
-
-<body onload="vidLoad()">
-<div class="homePageWrapper">
+	<header>
+		<a href="index.html"><div class="headerClick">
+		<p>QuantumBit Design</p>
+		<p>Naturally Inspired Craft</p>
+		</div></a>
+		
+		
+		<div id="navHamburger">
+			<span></span>
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</header>
 	
-	<div onclick="indexOpenNav()" id="navHamburger">&#9781;
-	</div>
-	
-		<nav id="mainSideNav" class="sideNav">
-		<a href="javascript:void(0)" class="closebtn" onclick="indexCloseNav()">&times;</a>
+	<nav class="dropNav">
 		<ul>
-			<li><a href="index.html" onclick="indexCloseNav()" id="home">Home</a></li>
-			<li><a href="sandbox.html" onclick="indexCloseNav()" id="sandbox">Javascript</br>Sandbox</a></li>
-			<li><a href="contact.html" onclick="indexCloseNav()" id="contact">Contact</a></li>
-			<li><a href="about.html" onclick="indexCloseNav()" id="about">About Me</a></li>
-			<li><a href="eloquent.html" onclick="indexCloseNav()" id="eloquent">Eloquent JS</br>Exercise Solutions</a></li>
+			<li><a href="index.html" id="home">Home</a></li>
+			<li><a href="sandbox.html" id="sandbox">Javascript</br>Sandbox</a></li>
+			<li><a href="contact.html" id="contact">Contact</a></li>
+			<li><a href="about.html" id="about">About Me</a></li>
+			<li><a href="eloquent.html" id="eloquent">Eloquent Javascript</a></li>
 		</ul>
+		<div class="nav-phoneNumber">
+			<a href="tel:209-559-9323">209.559.9323</a>
+		</div>
 	</nav>
 	
-	<div class="homePageContactInfo">
-		<span>&#9742; &ensp;<a href="tel:209-559-9323">209.559.9323</a></span>
-		<span>&#9993; &ensp;<a href="mailto: kevingoudswaard@gmail.com">kevingoudswaard@gmail.com</a></span>
-		<span><address>&#9873; &ensp;15528 Buena Vista Avenida</br> Sonora, CA 95370</address></span>
-	</div>	
-	
-	<div id="overlay" onclick="indexOverlayKill()">
-	</div>
-	
-	<div class="rightTab" onclick="openTab()">&#8920;</div>
-	<div class="rightTabContent">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeTab()">&times;</a>
-		<a href="https://twitter.com/QBit_Design" target="_blank" onclick="closeTab()"><img src="images/twitter.png" alt="twitter's icon, a blue bird chirping"></a>
-		<a href="https://www.linkedin.com/in/quantumbitdesign/" target="_blank" onclick="closeTab()"><img src="images/linkedin.png" alt="linked in's icon, the word 'in' with a blue background"></a>	
+	<div id="overlay">
 	</div>
 
-</div>
+<body>
+<div class="pageWrapper container-fluid">
+
+	
+	<div class="rightTabClickElement tabOpener">
+			<p class="TabOpener">contact</p>
+	</div>
+	
+	<div class="rightTab">
+		<span class="closebtn">&times;</span>		
+		<div class="homePageContactInfo">
+			<span>&#9742; &ensp;<a href="tel:209-559-9323">209.559.9323</a></span>
+			<span>&#9993; &ensp;<a href="mailto: kevingoudswaard@gmail.com">kevingoudswaard@gmail.com</a></span>
+			<span><address>&#9873; &ensp;15528 Buena Vista Avenida</br> Sonora, CA 95370</address></span>
+		</div>
+	</div>
+	
+
+	
+	<div class="row">
+
+		<div class="col-sm-6">
+		
+			<div class="card profile-card">
+			<a href="https://www.linkedin.com/in/quantumbitdesign/" target="_blank">
+			<img class="card-img-top" src="images/kevin-2.jpg" alt="A profile picture of the site's creator: Kevin Goudswaard"></a>
+				<div class="card-block">
+					<h4 class="card-title">Meet the Developer</h4>
+					<p class="card-text">My name is Kevin Goudswaard. I am an experienced front end developer, passionate about clean, attractive web design schemes. I have an eye for detail and take great pride in my work. Have a look around, and contact me with your idea!</p>
+					<a href="contact.html" class="btn btn-primary">Get in Contact!</a>
+				</div>
+			</div>
+			
+			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-pause="hover" data-interval="6000">
+				<ol class="carousel-indicators">
+					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				</ol>
+				<div class="carousel-inner">
+					<div class="carousel-item flex-column active">
+					<a href="http://www.thvmwc.com" target="_blank">
+					<img class="d-block w-100" src="images/carousel slides/water-company-website.jpg" alt="First slide, build example"></a>
+						<div class="carousel-caption d-none d-md-block">
+							<h3>Merchant Services</h3>
+						</div>
+					</div>
+					<div class="carousel-item">
+					<img class="d-block w-100" src="images/carousel slides/social-media.jpg" alt="Second slide, social media">
+						<div class="carousel-caption d-none d-md-block">
+							<h3>Social Media is Key</h3>
+						</div>
+					</div>
+					<div class="carousel-item">
+					<img class="d-block w-100" src="images/carousel slides/responsive-design.jpg" alt="Third slide, responsive design">
+						<div class="carousel-caption d-none d-md-block">
+							<h3>Responsive Design</h3>
+						</div>
+					</div>
+					<div class="carousel-item">
+					<img class="d-block w-100" src="images/carousel slides/concise-code.jpg" alt="Fourth slide, concise code">
+						<div class="carousel-caption d-none d-md-block">
+							<h3>Efficient, Fast Code</h3>
+						</div>
+					</div>
+				</div>
+					<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+					</a>
+					<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+					</a>
+			</div>
+			<div class="card profile-card">
+				<div class="card-block">
+					<h4 class="card-title">Quote of the Day</h4>
+					<blockquote id="qod-quote">
+						<p class="qod-text">Keep it simple, stupid!</p>
+						<p class="qod-author"><a href="http://quotesondesign.com/?p=194" target="_blank">
+						&mdash; Old Saying</a></p>
+					</blockquote>
+				</div>		
+			</div>			
+		</div>
+		
+		<div class="col-sm-6">
+		
+			<div class="card skills-card">
+				<img class="card-img-top" src="images/logos.png" alt="Card image cap">
+				<div class="card-block">
+					<h4 class="card-title">Technologies</h4>
+					<p class="card-text">The following are just some of the technologies I use, however, my philosophy is to never limit the design based on a lack of know-how.</p>
+				</div>
+				<ul class="list-group list-group-flush">
+					<a href="http://www.oracle.com/technetwork/java/intro-jquery-166845.html" target="_blank"><li class="list-group-item">jQuery, React with Redux</li></a>
+					<a href="https://themes.getbootstrap.com/collections/all" target="_blank"><li class="list-group-item">Twitter's Bootstrap 4</li></a>
+					<a href="https://www.smashingmagazine.com/2011/01/guidelines-for-responsive-web-design/" target="_blank"><li class="list-group-item">Responsive Design, Mobile First</li></a>
+					<a href="https://en.wikipedia.org/wiki/Representational_state_transfer" target="_blank"><li class="list-group-item">AGILE with RESTful Architecture</li></a>
+				</ul>
+				<div class="card-block">
+					<a href="https://github.com/quantumbitdesign" class="card-link">Github</a>
+					<a href="https://teamtreehouse.com/kevingoudswaard" class="card-link">Treehouse</a>
+				</div>
+			</div>
+
+			<div class="card skills-card">
+				<div class="card-block">
+					<h4 class="card-title">Design</h4>
+					<p class="card-text">This site is designed with a "natural" theme in mind. Inspiration and imagination empower design, and by that definition, design has no boundaries. </p>
+				</div>
+				<video controls muted loop autoplay id="teaserVideo">
+					<source src="video/quantumvid.mp4" type="video/mp4">
+				</video>			
+			</div>
+		</div>
+	</div>
+</div>	
 
 	<footer>
-	
 		<div id="footerSection1">
-		<p>&copy; 2017 QuantumBit Design</p>
-		<p>If you have a question about the site, or just simply want to chat, please <a href="contact.html">Contact Me</a>.</p>
-		<p>This site makes use of cookies and log data to optimize your experience while here, and while visiting this site, you agree to have this data collected. Use of the site without permission is prohibited.</p>
+			<p>&copy; 2017 QuantumBit Design</p>
+			<p>This website makes use of cookies and log data to optimize your experience. Upon visiting this site, you agree to have this data collected. Use of the site, or its contents, without permission from the creator, is prohibited.</p>
+			<a href="contact.html">Contact Me</a>
+			<a href="about.html">About</a>
+			<a href="sandbox.html">Sandbox</a>
+			<a href="eloquent.html">Eloquent JS</a>
 		</div>
-				
+		<div id="footerSection2">
+			<a href="https://twitter.com/QBit_Design" target="_blank"><img src="images/twitter.png" alt="twitter logo"></a>
+			<a href="https://www.linkedin.com/in/quantumbitdesign/" target="_blank"><img src="images/linkedin.png" alt="linked in logo"></a>
+		</div>		
 	</footer>
 
-<script src="quantum.js"></script>
+ <!-- QOTD -->	
+<script src="http://quotesondesign.com/api/3.0/api-3.0.js" 
+type="text/javascript" charset="utf-8"></script>	
+ <!-- jquery -->
+<script
+src="https://code.jquery.com/jquery-3.2.1.min.js"
+integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+crossorigin="anonymous"></script>
+ <!-- Boostrap Ajax js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+ <!-- bootstrap.js -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+ <!-- my javascript -->
+<script type="text/javascript" src="quantum.js"></script>
 </body>
 </html>
